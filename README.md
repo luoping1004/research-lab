@@ -5,6 +5,6 @@
 
   # luoping1004's Website
 
-  Visit **[website url](#)** 🚀
+  Visit **[luoping.ca/my-lab-website](http://luoping.ca/my-lab-website)** 🚀
 
   _Built with [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)_
