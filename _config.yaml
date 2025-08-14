@@ -1,7 +1,7 @@
 # site properties and page defaults
 title: Luo Lab
 subtitle: 
-description: An engaging 1-3 sentence description of your lab.
+description: Our lab develops innovative computational approaches to understand complex biological systems and improve human health. We focus on integrating multi-omics and clinical data with state-of-the-art machine learning to enable earlier diagnosis, personalized treatment, and deeper biological insights. By combining rigorous data science with close collaboration across disciplines, we aim to translate discoveries into real-world impact.
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
@@ -13,7 +13,7 @@ links:
   google-scholar: 7iAJBfkAAAAJ&hl=en
   github: luoping1004
   twitter: 
-  youtube: ping-algoma
+  youtube: "@ping-algoma"
 
 ### jekyll settings
 
