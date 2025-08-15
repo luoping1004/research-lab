@@ -3,7 +3,7 @@
 
 # luoping1004's Website
 
-An engaging 1-3 sentence description of your lab.
+Our lab develops innovative computational approaches to understand complex biological systems and improve human health. We focus on integrating multi-omics and clinical data with state-of-the-art machine learning to enable earlier diagnosis, personalized treatment, and deeper biological insights. By combining rigorous data science with close collaboration across disciplines, we aim to translate discoveries into real-world impact.
 
 {% include section.html %}
 

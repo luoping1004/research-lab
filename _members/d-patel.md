@@ -1,10 +1,10 @@
 ---
-name: John Doe
-image: images/photo.jpg
-role: phd
-group: alum
+name: Dhritiben Patel
+image: images/d.patel.jpg
+role: undergrad
 links:
-  github: john-doe
+  email: 
+  twitter: 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

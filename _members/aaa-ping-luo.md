@@ -1,14 +1,14 @@
 ---
-name: Jane Smith
-image: images/photo.jpg
+name: Ping Luo
+image: images/profile_pic.jpg
 role: principal-investigator
-affiliation: University of Colorado
+affiliation: Algoma University
 aliases:
-  - J. Smith
-  - J Smith
+  - P. Luo
+  - P Luo
 links:
-  home-page: https://janesmith.com
-  orcid: 0000-0001-8713-9213
+  home-page: https://luoping.ca
+  orcid: 0000-0002-0039-747X
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
