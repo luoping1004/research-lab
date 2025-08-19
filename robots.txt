@@ -1,1 +1,1 @@
-Sitemap: http://luoping.ca/my-lab-website/sitemap.xml
+Sitemap: http://luoping.ca/research-lab/sitemap.xml
