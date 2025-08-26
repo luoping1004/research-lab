@@ -11,7 +11,7 @@ Our lab develops innovative computational approaches to understand complex biolo
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We develop computational and AI-driven methods to analyze complex biological data, with a focus on cancer early detection and immune-oncology.
 
 {%
   include button.html
@@ -34,7 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We are currently working on cell free DNA (cfDNA)-based liquid biopsy approaches for early cancer diagnosis and computational models to identify tumor-reactive T cells.
 
 {%
   include button.html
