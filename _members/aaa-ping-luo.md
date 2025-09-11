@@ -1,6 +1,6 @@
 ---
 name: Ping Luo
-image: images/profile_pic.JPG
+image: images/profile.png
 role: principal-investigator
 affiliation: Algoma University
 aliases:
