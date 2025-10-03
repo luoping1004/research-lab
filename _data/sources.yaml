@@ -1,23 +1,101 @@
-- id: doi:10.1371/journal.pcbi.1007128
+- id: doi:10.1158/2159-8290.CD-23-0456
   type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
-  tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+- id: doi:10.1109/TCBB.2017.2770120
+  type: paper
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+- id: doi:10.1016/j.neucom.2017.10.039
+  type: paper
+
+- id: doi:10.3389/fgene.2019.00013
+  type: paper
+
+- id: doi:10.1093/bioinformatics/btz155
+  type: paper
+
+- id: doi:10.3389/fgene.2019.00270
+  type: paper
+
+- id: doi:10.1186/s12859-020-3346-8
+  type: paper
+
+- id: doi:10.1093/nar/gkaa437
+  type: paper
+
+- id: doi:10.1186/s12859-020-03873-z
+  type: paper
+
+- id: doi:10.1038/s41467-023-40966-8
+  type: paper
+
+- id: doi:10.1016/j.csbj.2022.10.029
+  type: paper
+
+- id: doi:10.1093/bib/bbac561
+  type: paper
+
+- id: doi:10.1158/2767-9764.CRC-22-0456
+  type: paper
+
+- id: doi:10.1002/pmic.201800129
+  type: paper
+
+- id: doi:10.1101/2022.10.07.22280848
+  type: paper
+
+- id: doi:10.1109/BIBM.2016.7822699
+  type: paper
+
+- id: doi:10.1007/978-3-319-94968-0_26
+  type: paper
+
+- id: doi:10.1007/978-3-319-78723-7_21
+  type: paper
+
+- id: doi:10.1007/978-3-030-26969-2_17
+  type: paper
+
+- id: xu2025iwbbio-tcr
+  title: "Predicting T Cell Receptor Specificity with Graph Attention Networks"
+  authors:
+    - Aiwu Xu
+    - Dhritiben Patel
+    - Wenjun Lin
+    - Ping Luo
+  publisher: 12th International Work-Conference on Bioinformatics and Biomedical Engineering
+  date: 2025-07
+  location: Gran Canaria, Spain
+  type: paper-conference
+
+- id: luo2025icict-viz
+  title: "Creation of Visualizations with a Multi-Agent LLM Approach"
+  authors:
+    - Ping Luo
+    - Kyle Gauthier
+    - Bo Huang
+    - Wenjun Lin
+  publisher: 10th International Congress on Information and Communication Technology
+  date: 2025-02
+  location: London, UK
+  type: paper-conference
+
+- id: doi:10.1016/j.immuni.2025.04.002
+  type: paper
+
+- id: doi:10.1038/s41590-025-02152-4
+  type: paper
+
+- id: doi:10.53941/ijndi0201004
+  type: paper
+
+- id: doi:10.1158/2767-9764.CRC-22-0402
+  type: paper
+
+- id: doi:10.1158/2159-8290.CD-23-1060
+  type: paper
+
+- id: doi:10.1038/s41467-024-51529-w
+  type: paper
+
+- id: doi:10.1002/widm.1383
+  type: paper

@@ -1,47 +1,29 @@
 - title: PANcancer GNN-based Early cancer detection using cell-free Methylome
   subtitle: PANGEM
   group: featured
-  image: images/PANGEM.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
+  image: images/pangem.png
+  link: https://github.com/GenTensor/PANGEM
+  description: 
+  repo: GenTensor/PANGEM
   tags:
-    - resource
+    - publication
 
 - title: Identifying tumor-reactive TCRs from graphs
   subtitle: graphTCR
   group: featured
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
+  image: images/graphTCR.png
+  link: https://github.com/GenTensor/graphTCR
+  description: 
+  repo: GenTensor/graphTCR
   tags:
-    - resource
-
-- title: Cool Tutorial
-  subtitle: a subtitle
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
-  tags:
-    - resource
     - publication
 
-- title: Cool Web App
-  subtitle: a subtitle
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
+- title: Disease-gene associations prediction
+  subtitle: dgMDL
+  image: images/dgn.png
+  link: https://github.com/luoping1004/dgMDL
+  description: 
+  repo: luoping1004/dgMDL
   tags:
-    - software
+    - publication
 
-- title: Cool Web Server
-  subtitle: a subtitle
-  image: images/photo.jpg
-  link: https://github.com/
-  description: Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
-  tags:
-    - software

@@ -1,264 +1,601 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
-- id: doi:10.1101/2025.06.19.660613
-  title: Scalable data harmonization for single-cell image-based profiling with CytoTable
+- id: doi:10.1158/2159-8290.CD-23-0456
+  title: "Early Cancer Detection in Li\u2013Fraumeni Syndrome with Cell-Free DNA"
   authors:
-  - Dave Bunten
-  - Jenna Tomkinson
-  - Erik Serrano
-  - Michael J. Lippincott
-  - Kenneth I. Brewer
-  - Vince Rubinetti
-  - Faisal Alquaddoomi
-  - Gregory P. Way
-  publisher: Cold Spring Harbor Laboratory
-  date: '2025-06-25'
-  link: https://doi.org/g9rfr3
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/nar/gkad1082
-  title: "The Monarch Initiative in 2024: an analytic platform integrating phenotypes,\
-    \ genes\_and diseases across species"
-  authors:
-  - Tim E Putman
-  - Kevin Schaper
-  - Nicolas Matentzoglu
-  - "Vincent\_P Rubinetti"
-  - "Faisal\_S Alquaddoomi"
-  - Corey Cox
-  - J Harry Caufield
-  - Glass Elsarboukh
-  - Sarah Gehrke
-  - Harshad Hegde
-  - "Justin\_T Reese"
-  - Ian Braun
-  - "Richard\_M Bruskiewich"
-  - Luca Cappelletti
-  - Seth Carbon
-  - "Anita\_R Caron"
-  - "Lauren\_E Chan"
-  - "Christopher\_G Chute"
-  - "Katherina\_G Cortes"
-  - "Vin\xEDcius De\_Souza"
-  - Tommaso Fontana
-  - "Nomi\_L Harris"
-  - "Emily\_L Hartley"
-  - Eric Hurwitz
-  - "Julius\_O B Jacobsen"
-  - Madan Krishnamurthy
-  - "Bryan\_J Laraway"
-  - "James\_A McLaughlin"
-  - "Julie\_A McMurry"
-  - "Sierra\_A T Moxon"
-  - "Kathleen\_R Mullen"
-  - "Shawn\_T O\u2019Neil"
-  - "Kent\_A Shefchek"
-  - Ray Stefancsik
-  - Sabrina Toro
-  - "Nicole\_A Vasilevsky"
-  - "Ramona\_L Walls"
-  - "Patricia\_L Whetzel"
-  - David Osumi-Sutherland
-  - Damian Smedley
-  - "Peter\_N Robinson"
-  - "Christopher\_J Mungall"
-  - "Melissa\_A Haendel"
-  - "Monica\_C Munoz-Torres"
-  publisher: Nucleic Acids Research
-  date: '2023-11-24'
-  link: https://doi.org/gs6kmr
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.10.11.560955
-  title: Integration of 168,000 samples reveals global patterns of the human gut microbiome
-  authors:
-  - Richard J. Abdill
-  - Samantha P. Graham
-  - Vincent Rubinetti
-  - Frank W. Albert
-  - Casey S. Greene
-  - Sean Davis
-  - Ran Blekhman
-  publisher: Cold Spring Harbor Laboratory
-  date: '2023-10-11'
-  link: https://doi.org/gsvf5z
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/nar/gkad289
-  title: 'MyGeneset.info: an interactive and programmatic platform for community-curated
-    and user-created collections of genes'
-  authors:
-  - Ricardo Avila
-  - Vincent Rubinetti
-  - Xinghua Zhou
-  - Dongbo Hu
-  - Zhongchao Qian
-  - Marco Alvarado Cano
-  - Everaldo Rodolpho
-  - Ginger Tsueng
-  - Casey Greene
-  - Chunlei Wu
-  publisher: Nucleic Acids Research
-  date: '2023-04-18'
-  link: https://doi.org/gr5hb5
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.01.05.522941
-  title: Hetnet connectivity search provides rapid insights into how two biomedical
-    entities are related
-  authors:
-  - Daniel S. Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J. Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N. Nicholson
-  - Yun Hao
-  - Blair D. Sullivan
-  - Michael W. Nagle
-  - Casey S. Greene
-  publisher: Cold Spring Harbor Laboratory
-  date: '2023-01-07'
-  link: https://doi.org/grmcb9
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/gigascience/giad047
-  title: Hetnet connectivity search provides rapid insights into how biomedical entities
-    are related
-  authors:
-  - Daniel S Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N Nicholson
-  - Yun Hao
-  - Blair D Sullivan
-  - Michael W Nagle
-  - Casey S Greene
-  publisher: GigaScience
-  date: '2022-12-28'
-  link: https://doi.org/gsd85n
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2022.02.18.461833
-  title: 'MolEvolvR: A web-app for characterizing proteins using molecular evolution
-    and phylogeny'
-  authors:
-  - Jacob D Krol
-  - Joseph T Burke
-  - Samuel Z Chen
-  - Lo M Sosinski
-  - Faisal S Alquaddoomi
-  - Evan P Brenner
-  - Ethan P Wolfe
-  - Vincent P Rubinetti
-  - Shaddai Amolitos
-  - Kellen M Reason
-  - John B Johnston
-  - Janani Ravi
-  publisher: Cold Spring Harbor Laboratory
-  date: '2022-02-22'
-  link: https://doi.org/gstx7j
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1186/s13059-020-02021-3
-  title: Compressing gene expression data using multiple latent space dimensionalities
-    learns complementary biological representations
-  authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Genome Biology
-  date: '2020-05-11'
-  link: https://doi.org/gg2mjh
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1371/journal.pcbi.1007128
-  title: Open collaborative writing with Manubot
-  authors:
-  - Daniel S. Himmelstein
-  - Vincent Rubinetti
-  - David R. Slochower
-  - Dongbo Hu
-  - Venkat S. Malladi
-  - Casey S. Greene
-  - Anthony Gitter
-  publisher: PLOS Computational Biology
-  date: '2020-12-04'
-  link: https://doi.org/c7np
-  orcid: 0000-0002-4655-3773
-  plugin: sources.py
-  file: sources.yaml
+  - Derek Wong
+  - Ping Luo
+  - Leslie E. Oldfield
+  - Haifan Gong
+  - Ledia Brunga
+  - Ron Rabinowicz
+  - Vallijah Subasri
+  - Clarissa Chan
+  - Tiana Downs
+  - Kirsten M. Farncombe
+  - Beatrice Luu
+  - Maia Norman
+  - Julia A. Sobotka
+  - Precious Uju
+  - Jenna Eagles
+  - Stephanie Pedersen
+  - Johanna Wellum
+  - Arnavaz Danesh
+  - Stephenie D. Prokopec
+  - Eric Y. Stutheit-Zhao
+  - Nadia Znassi
+  - Lawrence E. Heisler
+  - Richard Jovelin
+  - Bernard Lam
+  - Beatriz E. Lujan Toro
+  - Kayla Marsh
+  - Yogi Sundaravadanam
+  - Dax Torti
+  - Carina Man
+  - Anna Goldenberg
+  - Wei Xu
+  - Patrick Veit-Haibach
+  - Andrea S. Doria
+  - David Malkin
+  - Raymond H. Kim
+  - Trevor J. Pugh
+  publisher: Cancer Discovery
+  date: '2023-10-16'
+  link: https://doi.org/g95sjk
   type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-  - type: manubot
-    link: https://greenelab.github.io/meta-review/
-  - type: source
-    text: Manuscript Source
-    link: https://github.com/greenelab/meta-review
-  - type: website
-    link: http://manubot.org/
-  tags:
-  - open science
-  - collaboration
-  repo: greenelab/meta-review
-- id: doi:10.1101/573782
-  title: Sequential compression of gene expression across dimensionalities and methods
-    reveals no single best method or dimensionality
-  authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Cold Spring Harbor Laboratory
-  date: '2019-03-11'
-  link: https://doi.org/gfxjxf
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1016/j.csbj.2020.05.017
-  title: Constructing knowledge graphs and their biomedical applications
-  authors:
-  - David N. Nicholson
-  - Casey S. Greene
-  publisher: Computational and Structural Biotechnology Journal
-  date: '2020-01-01'
-  link: https://doi.org/gg7m48
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.7554/eLife.32822
-  title: Sci-Hub provides access to nearly all scholarly literature
+- id: doi:10.1109/TCBB.2017.2770120
+  title: Disease Gene Prediction by Integrating PPI Networks, Clinical RNA-Seq Data
+    and OMIM Data
   authors:
-  - Daniel S Himmelstein
-  - Ariel Rodriguez Romero
-  - Jacob G Levernier
-  - Thomas Anthony Munro
-  - Stephen Reid McLaughlin
-  - Bastian Greshake Tzovaras
-  - Casey S Greene
-  publisher: eLife
-  date: '2018-03-01'
-  link: https://doi.org/ckcj
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+  - Ping Luo
+  - Li-Ping Tian
+  - Jishou Ruan
+  - Fang-Xiang Wu
+  publisher: IEEE/ACM Transactions on Computational Biology and Bioinformatics
+  date: '2019-01-01'
+  link: https://doi.org/g95sjm
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.neucom.2017.10.039
+  title: 'CASNMF: A Converged Algorithm for symmetrical nonnegative matrix factorization'
+  authors:
+  - Li-Ping Tian
+  - Ping Luo
+  - Haiying Wang
+  - Huiru Zheng
+  - Fang-Xiang Wu
+  publisher: Neurocomputing
+  date: '2018-01-01'
+  link: https://doi.org/gcs5gm
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.3389/fgene.2019.00013
+  title: 'deepDriver: Predicting Cancer Driver Genes Based on Somatic Mutations Using
+    Deep Convolutional Neural Networks'
+  authors:
+  - Ping Luo
+  - Yulian Ding
+  - Xiujuan Lei
+  - Fang-Xiang Wu
+  publisher: Frontiers in Genetics
+  date: '2019-01-29'
+  link: https://doi.org/gm4zsf
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1093/bioinformatics/btz155
+  title: "Enhancing the prediction of disease\u2013gene associations with multimodal\
+    \ deep learning"
+  authors:
+  - Ping Luo
+  - Yuanyuan Li
+  - Li-Ping Tian
+  - Fang-Xiang Wu
+  publisher: Bioinformatics
+  date: '2019-03-02'
+  link: https://doi.org/g95sjn
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.3389/fgene.2019.00270
+  title: Identifying Disease-Gene Associations With Graph-Regularized Manifold Learning
+  authors:
+  - Ping Luo
+  - Qianghua Xiao
+  - Pi-Jing Wei
+  - Bo Liao
+  - Fang-Xiang Wu
+  publisher: Frontiers in Genetics
+  date: '2019-04-02'
+  link: https://doi.org/g95sjp
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1186/s12859-020-3346-8
+  title: Ensemble disease gene prediction by clinical sample-based networks
+  authors:
+  - Ping Luo
+  - Li-Ping Tian
+  - Bolin Chen
+  - Qianghua Xiao
+  - Fang-Xiang Wu
+  publisher: BMC Bioinformatics
+  date: '2020-03-01'
+  link: https://doi.org/g95sjq
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1093/nar/gkaa437
+  title: 'CReSCENT: CanceR Single Cell ExpressioN Toolkit'
+  authors:
+  - Suluxan Mohanraj
+  - "J Javier D\xEDaz-Mej\xEDa"
+  - Martin D Pham
+  - Hillary Elrick
+  - "Mia Husi\u0107"
+  - Shaikh Rashid
+  - Ping Luo
+  - Prabnur Bal
+  - Kevin Lu
+  - Samarth Patel
+  - Alaina Mahalanabis
+  - Alaine Naidas
+  - Erik Christensen
+  - Danielle Croucher
+  - Laura M Richards
+  - Parisa Shooshtari
+  - Michael Brudno
+  - Arun K Ramani
+  - Trevor J Pugh
+  publisher: Nucleic Acids Research
+  date: '2020-06-01'
+  link: https://doi.org/ggx5jm
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1186/s12859-020-03873-z
+  title: Identifying cell types from single-cell data based on similarities and dissimilarities
+    between cells
+  authors:
+  - Yuanyuan Li
+  - Ping Luo
+  - Yi Lu
+  - Fang-Xiang Wu
+  publisher: BMC Bioinformatics
+  date: '2021-05-01'
+  link: https://doi.org/gm2h88
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1038/s41467-023-40966-8
+  title: Immunophenotypic correlates of sustained MRD negativity in patients with
+    multiple myeloma
+  authors:
+  - David G. Coffey
+  - Francesco Maura
+  - Edgar Gonzalez-Kozlova
+  - J. Javier Diaz-Mejia
+  - Ping Luo
+  - Yong Zhang
+  - Yuexin Xu
+  - Edus H. Warren
+  - Travis Dawson
+  - Brian Lee
+  - Hui Xie
+  - Eric Smith
+  - Amanda Ciardiello
+  - Hearn J. Cho
+  - Adeeb Rahman
+  - Seunghee Kim-Schulze
+  - Benjamin Diamond
+  - Alexander Lesokhin
+  - Dickran Kazandjian
+  - Trevor J. Pugh
+  - Damian J. Green
+  - Sacha Gnjatic
+  - Ola Landgren
+  publisher: Nature Communications
+  date: '2023-09-02'
+  link: https://doi.org/gspf9n
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.csbj.2022.10.029
+  title: Evaluation of single-cell RNA-seq clustering algorithms on cancer tumor datasets
+  authors:
+  - Alaina Mahalanabis
+  - Andrei L. Turinsky
+  - "Mia Husi\u0107"
+  - Erik Christensen
+  - Ping Luo
+  - Alaine Naidas
+  - Michael Brudno
+  - Trevor Pugh
+  - Arun K. Ramani
+  - Parisa Shooshtari
+  publisher: Computational and Structural Biotechnology Journal
+  date: '2022-01-01'
+  link: https://doi.org/g95sjr
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1093/bib/bbac561
+  title: Evaluation of single-cell RNAseq labelling algorithms using cancer datasets
+  authors:
+  - Erik Christensen
+  - Ping Luo
+  - Andrei Turinsky
+  - "Mia Husi\u0107"
+  - Alaina Mahalanabis
+  - Alaine Naidas
+  - Juan Javier Diaz-Mejia
+  - Michael Brudno
+  - Trevor Pugh
+  - Arun Ramani
+  - Parisa Shooshtari
+  publisher: Briefings in Bioinformatics
+  date: '2022-12-30'
+  link: https://doi.org/g95sjs
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1158/2767-9764.CRC-22-0456
+  title: Integrated, Longitudinal Analysis of Cell-free DNA in Uveal Melanoma
+  authors:
+  - Derek Wong
+  - Ping Luo
+  - Nadia Znassi
+  - Diana P. Arteaga
+  - Diana Gray
+  - Arnavaz Danesh
+  - Ming Han
+  - Eric Y. Zhao
+  - Stephanie Pedersen
+  - Stephenie Prokopec
+  - Yogi Sundaravadanam
+  - Dax Torti
+  - Kayla Marsh
+  - Sareh Keshavarzi
+  - Wei Xu
+  - Hatem Krema
+  - Anthony M. Joshua
+  - Marcus O. Butler
+  - Trevor J. Pugh
+  publisher: Cancer Research Communications
+  date: '2023-02-15'
+  link: https://doi.org/g7k5qr
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1002/pmic.201800129
+  title: "A Novel Core\u2010Attachment\u2013Based Method to Identify Dynamic Protein\
+    \ Complexes Based on Gene Expression Profiles and PPI Networks"
+  authors:
+  - Qianghua Xiao
+  - Ping Luo
+  - Min Li
+  - Jianxin Wang
+  - "Fang\u2010Xiang Wu"
+  publisher: PROTEOMICS
+  date: '2019-02-20'
+  link: https://doi.org/g95sqk
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1101/2022.10.07.22280848
+  title: Integrated analysis of cell-free DNA for the early detection of cancer in
+    people with Li-Fraumeni Syndrome
+  authors:
+  - Derek Wong
+  - Ping Luo
+  - Leslie Oldfield
+  - Haifan Gong
+  - Ledia Brunga
+  - Ron Rabinowicz
+  - Vallijah Subasri
+  - Clarissa Chan
+  - Tiana Downs
+  - Kirsten M Farncombe
+  - Beatrice Luu
+  - Maia Norman
+  - Jenna Eagles
+  - Stephenie Pederson
+  - Johanna Wellum
+  - Arnavaz Danesh
+  - Stephenie Prokopec
+  - Eric Zhao
+  - Nadia Znassi
+  - Bernard Lam
+  - Kayla Marsh
+  - Yogi Sundaravadanam
+  - Dax Torti
+  - David Malkin
+  - Raymond H Kim
+  - Trevor J Pugh
+  publisher: Cold Spring Harbor Laboratory
+  date: '2022-10-11'
+  link: https://doi.org/g95sqm
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/BIBM.2016.7822699
+  title: Identifying disease genes from PPI networks weighted by gene expression under
+    different conditions
+  authors:
+  - ' Ping Luo'
+  - ' Li-Ping Tian'
+  - ' Jishou Ruan'
+  - Fang-Xiang Wu
+  publisher: 2016 IEEE International Conference on Bioinformatics and Biomedicine
+    (BIBM)
+  date: '2016-12-01'
+  link: https://doi.org/g95sqn
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-319-94968-0_26
+  title: Predicting Gene-Disease Associations with Manifold Learning
+  authors:
+  - Ping Luo
+  - Li-Ping Tian
+  - Bolin Chen
+  - Qianghua Xiao
+  - Fang-Xiang Wu
+  publisher: Lecture Notes in Computer Science
+  date: '2018-01-01'
+  link: https://doi.org/g95sqp
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-319-78723-7_21
+  title: Predicting Disease Genes from Clinical Single Sample-Based PPI Networks
+  authors:
+  - Ping Luo
+  - Li-Ping Tian
+  - Bolin Chen
+  - Qianghua Xiao
+  - Fang-Xiang Wu
+  publisher: Lecture Notes in Computer Science
+  date: '2018-01-01'
+  link: https://doi.org/g95sqq
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-26969-2_17
+  title: Improved Spectral Clustering Method for Identifying Cell Types from Single-Cell
+    Data
+  authors:
+  - Yuanyuan Li
+  - Ping Luo
+  - Yi Lu
+  - Fang-Xiang Wu
+  publisher: Lecture Notes in Computer Science
+  date: '2019-01-01'
+  link: https://doi.org/g95sqr
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: xu2025iwbbio-tcr
+  title: Predicting T Cell Receptor Specificity with Graph Attention Networks
+  authors:
+  - Aiwu Xu
+  - Dhritiben Patel
+  - Wenjun Lin
+  - Ping Luo
+  publisher: 12th International Work-Conference on Bioinformatics and Biomedical Engineering
+  date: ''
+  location: Gran Canaria, Spain
+  type: paper-conference
+  plugin: sources.py
+  file: sources.yaml
+- id: luo2025icict-viz
+  title: Creation of Visualizations with a Multi-Agent LLM Approach
+  authors:
+  - Ping Luo
+  - Kyle Gauthier
+  - Bo Huang
+  - Wenjun Lin
+  publisher: 10th International Congress on Information and Communication Technology
+  date: ''
+  location: London, UK
+  type: paper-conference
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.immuni.2025.04.002
+  title: B cell-derived acetylcholine promotes liver regeneration by regulating Kupffer
+    cell and hepatic CD8+ T cell function
+  authors:
+  - Nastaran Fazel Modares
+  - Liam D. Hendrikse
+  - Logan K. Smith
+  - Michael St. Paul
+  - Jillian Haight
+  - Ping Luo
+  - Shaofeng Liu
+  - Jerome Fortin
+  - Frances K. Tong
+  - Andrew C. Wakeham
+  - Soode Moghadas Jafari
+  - Chunxing Zheng
+  - Mackenzie Buckland
+  - Robert Flick
+  - Jennifer Silvester
+  - Thorsten Berger
+  - Troy Ketela
+  - Simone Helke
+  - Erica Foffi
+  - Raheleh Niavarani
+  - Ryan Mcwilliam
+  - Mary E. Saunders
+  - Isabelle Colonna
+  - Bruna Araujo David
+  - Tashi Rastogi
+  - Woo-Yong Lee
+  - Paul Kubes
+  - Tak W. Mak
+  publisher: Immunity
+  date: '2025-05-01'
+  link: https://doi.org/g95sqt
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1038/s41590-025-02152-4
+  title: Cholinergic regulation of thymocyte negative selection
+  authors:
+  - Shaofeng Liu
+  - Chunxing Zheng
+  - Robert Nechanitzky
+  - Ping Luo
+  - Parameswaran Ramachandran
+  - Dat Nguyen
+  - Andrew J. Elia
+  - Soode Moghadas Jafari
+  - Rhoda Law
+  - Bryan E. Snow
+  - Andrew C. Wakeham
+  - Thorsten Berger
+  - Hui Chen
+  - Kyle T. Gill
+  - Ryan Mcwilliam
+  - Jerome Fortin
+  - Nastaran Fazel Modares
+  - Mary E. Saunders
+  - Kiichi Murakami
+  - Yangmin Qiu
+  - Zhiwei You
+  - Mahmood Mohtashami
+  - Hai Qi
+  - Pamela S. Ohashi
+  - "Juan Carlos Z\xFA\xF1iga-Pfl\xFCcker"
+  - Tak W. Mak
+  publisher: Nature Immunology
+  date: '2025-05-21'
+  link: https://doi.org/g95sqv
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.53941/ijndi0201004
+  title: Network Learning for Biomarker Discovery
+  authors:
+  - Yulian Ding
+  - Minghan Fu
+  - Ping Luo
+  - Fang-Xiang Wu
+  publisher: International Journal of Network Dynamics and Intelligence
+  date: '2023-03-27'
+  link: https://doi.org/g95sqw
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1158/2767-9764.CRC-22-0402
+  title: "Multiple Germline Events Contribute to Cancer\_Development in Patients with\
+    \ Li-Fraumeni Syndrome"
+  authors:
+  - Vallijah Subasri
+  - Nicholas Light
+  - Nisha Kanwar
+  - Jack Brzezinski
+  - Ping Luo
+  - Jordan R. Hansford
+  - Elizabeth Cairney
+  - Carol Portwine
+  - Christine Elser
+  - Jonathan L. Finlay
+  - Kim E. Nichols
+  - Noa Alon
+  - Ledia Brunga
+  - Jo Anson
+  - Wendy Kohlmann
+  - Kelvin C. de Andrade
+  - Payal P. Khincha
+  - Sharon A. Savage
+  - Joshua D. Schiffman
+  - Rosanna Weksberg
+  - Trevor J. Pugh
+  - Anita Villani
+  - Adam Shlien
+  - Anna Goldenberg
+  - David Malkin
+  publisher: Cancer Research Communications
+  date: '2023-05-01'
+  link: https://doi.org/g95snt
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1158/2159-8290.CD-23-1060
+  title: Early Changes in Tumor-Naive Cell-Free Methylomes and Fragmentomes Predict
+    Outcomes in Pembrolizumab-Treated Solid Tumors
+  authors:
+  - Eric Y. Stutheit-Zhao
+  - Enrique Sanz-Garcia
+  - Zhihui (Amy) Liu
+  - Derek Wong
+  - Kayla Marsh
+  - Albiruni R. Abdul Razak
+  - Anna Spreafico
+  - Philippe L. Bedard
+  - Aaron R. Hansen
+  - Stephanie Lheureux
+  - Dax Torti
+  - Bernard Lam
+  - Shih Yu Cindy Yang
+  - Justin Burgener
+  - Ping Luo
+  - Yong Zeng
+  - Nicholas Cheng
+  - Philip Awadalla
+  - Scott V. Bratman
+  - Pamela S. Ohashi
+  - Trevor J. Pugh
+  - Lillian L. Siu
+  publisher: Cancer Discovery
+  date: '2024-02-22'
+  link: https://doi.org/g88t86
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1038/s41467-024-51529-w
+  title: Cell-free DNA from germline TP53 mutation carriers reflect cancer-like fragmentation
+    patterns
+  authors:
+  - Derek Wong
+  - Maha Tageldein
+  - Ping Luo
+  - Erik Ensminger
+  - Jeffrey Bruce
+  - Leslie Oldfield
+  - Haifan Gong
+  - Nicholas William Fischer
+  - Brianne Laverty
+  - Vallijah Subasri
+  - Scott Davidson
+  - Reem Khan
+  - Anita Villani
+  - Adam Shlien
+  - Raymond H. Kim
+  - David Malkin
+  - Trevor J. Pugh
+  publisher: Nature Communications
+  date: '2024-08-27'
+  link: https://doi.org/g95skm
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1002/widm.1383
+  title: "Predicting disease\u2010associated genes: Computational methods, databases,\
+    \ and evaluations"
+  authors:
+  - Ping Luo
+  - Bolin Chen
+  - Bo Liao
+  - "Fang\u2010Xiang Wu"
+  publisher: WIREs Data Mining and Knowledge Discovery
+  date: '2020-07-28'
+  link: https://doi.org/g95sqx
+  type: paper
   plugin: sources.py
   file: sources.yaml

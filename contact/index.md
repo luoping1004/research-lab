@@ -9,7 +9,7 @@ nav:
 
 ## Join Us ##
 
-We are actively looking to expand the lab at all levels! The lab is based at Algoma University, a vibrant, new, and rapidly growing research institute located in Brampton. You can learn more about our lab’s work on our research and publications pages.
+We are actively looking to expand the lab at all levels! The lab is based at Algoma University, a vibrant, new, and rapidly growing research institute located in Brampton. You can learn more about our lab's work on our research and publications pages.
 
 {%
   include button.html
@@ -36,8 +36,8 @@ We are actively looking to expand the lab at all levels! The lab is based at Alg
 
 {%
   include figure.html
-  image="images/photo.jpg"
-  caption="Lorem ipsum"
+  image="images/SSM.webp"
+  caption="Sault Ste. Marie Campus"
 %}
 
 {% endcapture %}
@@ -46,8 +46,8 @@ We are actively looking to expand the lab at all levels! The lab is based at Alg
 
 {%
   include figure.html
-  image="images/photo.jpg"
-  caption="Lorem ipsum"
+  image="images/BRAMPTON.webp"
+  caption="Brampton Campus"
 %}
 
 {% endcapture %}
@@ -57,21 +57,21 @@ We are actively looking to expand the lab at all levels! The lab is based at Alg
 {% include section.html dark=true %}
 
 {% capture col1 %}
-Lorem ipsum dolor sit amet  
-consectetur adipiscing elit  
-sed do eiusmod tempor
+24 Queen St. East (A-203)<br>
+Brampton, Ontario Canada<br>
+L6V 1A3
 {% endcapture %}
 
 {% capture col2 %}
-Lorem ipsum dolor sit amet  
-consectetur adipiscing elit  
-sed do eiusmod tempor
+1520 Queen Street East<br>
+Sault Ste. Marie, Ontario<br>
+Canada P6A 2G4
 {% endcapture %}
 
 {% capture col3 %}
-Lorem ipsum dolor sit amet  
-consectetur adipiscing elit  
-sed do eiusmod tempor
+Tel: 1-888-Algoma-U<br>
+(1-888-254-6628)<br>
+Info@algomau.ca
 {% endcapture %}
 
 {% include cols.html col1=col1 col2=col2 col3=col3 %}

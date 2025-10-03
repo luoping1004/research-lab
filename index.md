@@ -26,7 +26,7 @@ We develop computational and AI-driven methods to analyze complex biological dat
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/research_img.png"
   link="research"
   title="Our Research"
   text=text
@@ -49,7 +49,7 @@ We are currently working on cell free DNA (cfDNA)-based liquid biopsy approaches
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/project_img.png"
   link="projects"
   title="Our Projects"
   flip=true
@@ -58,8 +58,7 @@ We are currently working on cell free DNA (cfDNA)-based liquid biopsy approaches
 %}
 
 {% capture text %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Our team brings together researchers, students, and collaborators who share a passion for advancing science and innovation.
 
 {%
   include button.html
@@ -74,7 +73,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/team_img.png"
   link="team"
   title="Our Team"
   text=text

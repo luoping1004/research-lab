@@ -7,14 +7,15 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<!-- This page presents our lab’s research directions, publications, and collaborations aimed at advancing knowledge in our field. -->
 
 {% include section.html %}
 
 ## Highlighted
 
-{% include citation.html lookup="Open collaborative writing with Manubot" style="rich" %}
+{% include citation.html lookup="Predicting T Cell Receptor Specificity with Graph Attention Networks" style="rich" %}
+
+{% include citation.html lookup="Early Cancer Detection in Li–Fraumeni Syndrome with Cell-Free DNA" style="rich" %}
 
 {% include section.html %}
 
