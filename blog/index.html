@@ -379,67 +379,119 @@
 
 
 
-<header class="background" style="--image: url('/research-lab/images/background.jpg')" data-dark="true">
+<header class="background" style="--image: url('/research-lab/images/background1.png')" data-dark="true">
   <a href="/research-lab/" class="home">
     
       <span class="logo">
         
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 200">
+  <defs>
+    <lineargradient id="cyan-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:1"></stop>
+    </lineargradient>
+    <lineargradient id="magenta-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#cc0099;stop-opacity:1"></stop>
+    </lineargradient>
+  </defs>
+
   <style>
-    .bubble {
-      animation: float 2s ease-out both infinite var(--delay);
+    .hex-outer {
+      animation: pulse 3s ease-in-out infinite;
+      transform-origin: center;
     }
-    @keyframes float {
-      0% {
-        opacity: 0;
+    .hex-mid {
+      animation: pulse 3s ease-in-out infinite 0.3s;
+      transform-origin: center;
+    }
+    .hex-inner {
+      animation: pulse 3s ease-in-out infinite 0.6s;
+      transform-origin: center;
+    }
+    .cube {
+      animation: float 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .glitch-line {
+      animation: glitch 2s ease-in-out infinite var(--delay);
+      opacity: 0.6;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
       }
       50% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      75% {
         opacity: 1;
+        transform: scale(1.05);
       }
-      100% {
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotateX(0deg);
+      }
+      50% {
+        transform: translateY(-5px) rotateX(5deg);
+      }
+    }
+
+    @keyframes glitch {
+      0%, 100% {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateX(0);
+      }
+      10% {
+        opacity: 0.6;
+        transform: translateX(-2px);
+      }
+      20% {
+        opacity: 0;
+        transform: translateX(2px);
+      }
+      30% {
+        opacity: 0;
       }
     }
   </style>
-  <g fill="currentColor" opacity="0.5">
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.1s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.4s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 1.1s"></circle>
+
+  <!-- Glitch effect lines -->
+  <line class="glitch-line" x1="50" y1="30" x2="80" y2="30" stroke="url(#cyan-gradient)" stroke-width="2" style="--delay: 0.5s"></line>
+  <line class="glitch-line" x1="120" y1="50" x2="150" y2="50" stroke="url(#magenta-gradient)" stroke-width="2" style="--delay: 1s"></line>
+  <line class="glitch-line" x1="40" y1="150" x2="70" y2="150" stroke="url(#cyan-gradient)" stroke-width="2" style="--delay: 1.5s"></line>
+
+  <!-- Outer hexagon -->
+  <polygon class="hex-outer" points="100,20 160,55 160,125 100,160 40,125 40,55" fill="none" stroke="url(#cyan-gradient)" stroke-width="3"></polygon>
+
+  <!-- Middle hexagon -->
+  <polygon class="hex-mid" points="100,35 145,62.5 145,117.5 100,145 55,117.5 55,62.5" fill="none" stroke="url(#magenta-gradient)" stroke-width="2.5"></polygon>
+
+  <!-- Inner hexagon -->
+  <polygon class="hex-inner" points="100,50 130,70 130,110 100,130 70,110 70,70" fill="none" stroke="url(#cyan-gradient)" stroke-width="2"></polygon>
+
+  <!-- 3D Cube in center -->
+  <g class="cube">
+    <!-- Back face -->
+    <polygon points="100,75 115,83 115,100 100,108 85,100 85,83" fill="#0099cc" opacity="0.4"></polygon>
+
+    <!-- Top face -->
+    <polygon points="100,75 85,83 85,70 100,62 115,70 115,83" fill="url(#cyan-gradient)" opacity="0.8"></polygon>
+
+    <!-- Right face -->
+    <polygon points="100,75 115,83 115,100 100,108" fill="url(#magenta-gradient)" opacity="0.6"></polygon>
+
+    <!-- Left face -->
+    <polygon points="100,75 85,83 85,100 100,108" fill="#00d4ff" opacity="0.7"></polygon>
+
+    <!-- Front bottom face -->
+    <polygon points="100,108 85,100 85,113 100,121 115,113 115,100" fill="url(#cyan-gradient)" opacity="0.9"></polygon>
   </g>
-  <path fill="#38bdf8" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L -19.5 11.25
-      L 0 22.5
-      L 19.5 11.25
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="#bae6fd" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L 0 0
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="none" stroke="currentColor" stroke-width="5" d="
-      M -18 -53
-      L -10 -53
-      L -10 -29.2
-      L -30.3 -17.5
-      L -30.3 17.5
-      L 0 35
-      L 30.3 17.5
-      L 30.3 -17.5
-      L 10 -29.2
-      L 10 -53
-      L 18 -53
-    "></path>
+
+  <!-- Additional glitch elements -->
+  <rect class="glitch-line" x="145" y="90" width="8" height="2" fill="url(#magenta-gradient)" style="--delay: 0.8s"></rect>
+  <rect class="glitch-line" x="47" y="90" width="8" height="2" fill="url(#cyan-gradient)" style="--delay: 1.2s"></rect>
 </svg>
 
         
@@ -513,9 +565,6 @@
   <section class="background" data-size="page">
     <h1 id="blog">
 <i class="icon fa-solid fa-feather-pointed"></i>Blog</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </section>
 
   
@@ -538,24 +587,22 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 <div class="tags">
     
-      <a href='/research-lab/blog/?search="tag:%20biology"' class="tag" data-tooltip='Show items with the tag "biology"'>
-        biology
+      <a href='/research-lab/blog/?search="tag:%20cancer-detection"' class="tag" data-tooltip='Show items with the tag "cancer-detection"'>
+        cancer-detection
       </a>
     
-      <a href='/research-lab/blog/?search="tag:%20medicine"' class="tag" data-tooltip='Show items with the tag "medicine"'>
-        medicine
+      <a href='/research-lab/blog/?search="tag:%20research"' class="tag" data-tooltip='Show items with the tag "research"'>
+        research
       </a>
     
-      <a href='/research-lab/blog/?search="tag:%20big-data"' class="tag" data-tooltip='Show items with the tag "big-data"'>
-        big-data
+      <a href='/research-lab/blog/?search="tag:%20media"' class="tag" data-tooltip='Show items with the tag "media"'>
+        media
       </a>
     
   </div>
 
 <div class="search-info"></div>
 
-<h3 id="2023">2023</h3>
-
 <div class="post-excerpt-container">
   <div class="post-excerpt">
     
@@ -563,13 +610,9 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     
 
     
-      <a href="/research-lab/2023/02/23/example-post-3.html" class="post-excerpt-image" aria-label="Example post 3">
-        <img src="/research-lab/images/photo.jpg" alt="Example post 3" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
-      </a>
-    
 
     <div class="post-excerpt-text">
-      <a href="/research-lab/2023/02/23/example-post-3.html">Example post 3</a>
+      <a href="/research-lab/2025/08/29/radio-interview-cancer-research.html">Radio Interview on Cancer Research</a>
 
       <div class="post-info">
   
@@ -577,10 +620,34 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     
       
       
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>john-doe</span>
-        </span>
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/research-lab/members/aaa-ping-luo.html" class="portrait" data-style="tiny" aria-label="Ping Luo">
+    
+      <i class="icon fa-solid fa-microscope"></i>
+    
+
+    <img src="/research-lab/images/profile.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Ping Luo
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Principal Investigator
+      </span>
+    
+
+    
+  </a>
+</div>
+
       
     
   
@@ -591,14 +658,14 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   
     <span data-tooltip="Originally published on">
       <i class="icon fa-regular fa-calendar"></i>
-      <span>February 23, 2023</span>
+      <span>August 29, 2025</span>
     </span>
   
 
   
     <span data-tooltip="Last updated on">
       <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>September 11, 2025</span>
+      <span>October 04, 2025</span>
     </span>
   
 </div>
@@ -609,12 +676,16 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
   <div class="tags">
     
-      <a href='/research-lab/blog?search="tag:%20biology"' class="tag" data-tooltip='Show items with the tag "biology"'>
-        biology
+      <a href='/research-lab/blog?search="tag:%20cancer-detection"' class="tag" data-tooltip='Show items with the tag "cancer-detection"'>
+        cancer-detection
       </a>
     
-      <a href='/research-lab/blog?search="tag:%20medicine"' class="tag" data-tooltip='Show items with the tag "medicine"'>
-        medicine
+      <a href='/research-lab/blog?search="tag:%20research"' class="tag" data-tooltip='Show items with the tag "research"'>
+        research
+      </a>
+    
+      <a href='/research-lab/blog?search="tag:%20media"' class="tag" data-tooltip='Show items with the tag "media"'>
+        media
       </a>
     
   </div>
@@ -625,15 +696,13 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
       
       
-      <p data-search="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <p data-search="Dr. Ping Luo discusses groundbreaking cancer detection research in this radio interview. Listen to learn about our lab s innovative computational approaches and their potential impact on early cancer diagnosis.Listen to the Radio Interview">
+        Dr. Ping Luo discusses groundbreaking cancer detection research in this radio interview. Listen to learn about our lab’s innovative computational approaches and their potential impact on early cancer diagnosis.
 
       </p>
     </div>
   </div>
 </div>
-
-<h3 id="2021">2021</h3>
 
 <div class="post-excerpt-container">
   <div class="post-excerpt">
@@ -644,7 +713,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     
 
     <div class="post-excerpt-text">
-      <a href="/research-lab/2021/09/30/example-post-2.html">Example post 2</a>
+      <a href="/research-lab/2025/08/29/cbc-cancer-detection-interview.html">Groundbreaking Research in Detecting Cancer</a>
 
       <div class="post-info">
   
@@ -652,10 +721,34 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     
       
       
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>jane-smith</span>
-        </span>
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/research-lab/members/aaa-ping-luo.html" class="portrait" data-style="tiny" aria-label="Ping Luo">
+    
+      <i class="icon fa-solid fa-microscope"></i>
+    
+
+    <img src="/research-lab/images/profile.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Ping Luo
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Principal Investigator
+      </span>
+    
+
+    
+  </a>
+</div>
+
       
     
   
@@ -666,77 +759,14 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   
     <span data-tooltip="Originally published on">
       <i class="icon fa-regular fa-calendar"></i>
-      <span>September 30, 2021</span>
+      <span>August 29, 2025</span>
     </span>
   
 
   
     <span data-tooltip="Last updated on">
       <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>September 11, 2025</span>
-    </span>
-  
-</div>
-
-
-  
-
-
-
-
-
-
-      
-      
-      <p data-search="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-      </p>
-    </div>
-  </div>
-</div>
-
-<h3 id="2019">2019</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt">
-    
-    
-    
-
-    
-
-    <div class="post-excerpt-text">
-      <a href="/research-lab/2019/01/07/example-post-1.html">Example post 1</a>
-
-      <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>sarah-johnson</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>January 07, 2019</span>
-    </span>
-  
-
-  
-    <span data-tooltip="Last updated on">
-      <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>September 11, 2025</span>
+      <span>October 04, 2025</span>
     </span>
   
 </div>
@@ -747,16 +777,16 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
   <div class="tags">
     
-      <a href='/research-lab/blog?search="tag:%20biology"' class="tag" data-tooltip='Show items with the tag "biology"'>
-        biology
+      <a href='/research-lab/blog?search="tag:%20cancer-detection"' class="tag" data-tooltip='Show items with the tag "cancer-detection"'>
+        cancer-detection
       </a>
     
-      <a href='/research-lab/blog?search="tag:%20medicine"' class="tag" data-tooltip='Show items with the tag "medicine"'>
-        medicine
+      <a href='/research-lab/blog?search="tag:%20research"' class="tag" data-tooltip='Show items with the tag "research"'>
+        research
       </a>
     
-      <a href='/research-lab/blog?search="tag:%20big-data"' class="tag" data-tooltip='Show items with the tag "big-data"'>
-        big-data
+      <a href='/research-lab/blog?search="tag:%20media"' class="tag" data-tooltip='Show items with the tag "media"'>
+        media
       </a>
     
   </div>
@@ -767,8 +797,8 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
       
       
-      <p data-search="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <p data-search="Our lab s groundbreaking research on cancer detection was featured in a CTV News interview. Watch the full interview to learn more about our innovative approaches to early cancer detection using computational methods and liquid biopsy technologies.Watch the CTV News Interview">
+        Our lab’s groundbreaking research on cancer detection was featured in a CTV News interview. Watch the full interview to learn more about our innovative approaches to early cancer detection using computational methods and liquid biopsy technologies.
 
       </p>
     </div>
@@ -859,21 +889,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   <div class="button-wrapper">
     <a class="button" href="/research-lab" data-tooltip="Twitter" data-style="bare" aria-label="Twitter">
       <i class="icon fa-brands fa-twitter"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://youtube.com/@ping-algoma" data-tooltip="YouTube" data-style="bare" aria-label="YouTube">
-      <i class="icon fa-brands fa-youtube"></i>
       
     </a>
   </div>

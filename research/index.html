@@ -379,67 +379,119 @@
 
 
 
-<header class="background" style="--image: url('/research-lab/images/background.jpg')" data-dark="true">
+<header class="background" style="--image: url('/research-lab/images/background1.png')" data-dark="true">
   <a href="/research-lab/" class="home">
     
       <span class="logo">
         
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 200">
+  <defs>
+    <lineargradient id="cyan-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:1"></stop>
+    </lineargradient>
+    <lineargradient id="magenta-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#cc0099;stop-opacity:1"></stop>
+    </lineargradient>
+  </defs>
+
   <style>
-    .bubble {
-      animation: float 2s ease-out both infinite var(--delay);
+    .hex-outer {
+      animation: pulse 3s ease-in-out infinite;
+      transform-origin: center;
     }
-    @keyframes float {
-      0% {
-        opacity: 0;
+    .hex-mid {
+      animation: pulse 3s ease-in-out infinite 0.3s;
+      transform-origin: center;
+    }
+    .hex-inner {
+      animation: pulse 3s ease-in-out infinite 0.6s;
+      transform-origin: center;
+    }
+    .cube {
+      animation: float 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .glitch-line {
+      animation: glitch 2s ease-in-out infinite var(--delay);
+      opacity: 0.6;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
       }
       50% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      75% {
         opacity: 1;
+        transform: scale(1.05);
       }
-      100% {
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotateX(0deg);
+      }
+      50% {
+        transform: translateY(-5px) rotateX(5deg);
+      }
+    }
+
+    @keyframes glitch {
+      0%, 100% {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateX(0);
+      }
+      10% {
+        opacity: 0.6;
+        transform: translateX(-2px);
+      }
+      20% {
+        opacity: 0;
+        transform: translateX(2px);
+      }
+      30% {
+        opacity: 0;
       }
     }
   </style>
-  <g fill="currentColor" opacity="0.5">
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.1s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.4s"></circle>
-    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 1.1s"></circle>
+
+  <!-- Glitch effect lines -->
+  <line class="glitch-line" x1="50" y1="30" x2="80" y2="30" stroke="url(#cyan-gradient)" stroke-width="2" style="--delay: 0.5s"></line>
+  <line class="glitch-line" x1="120" y1="50" x2="150" y2="50" stroke="url(#magenta-gradient)" stroke-width="2" style="--delay: 1s"></line>
+  <line class="glitch-line" x1="40" y1="150" x2="70" y2="150" stroke="url(#cyan-gradient)" stroke-width="2" style="--delay: 1.5s"></line>
+
+  <!-- Outer hexagon -->
+  <polygon class="hex-outer" points="100,20 160,55 160,125 100,160 40,125 40,55" fill="none" stroke="url(#cyan-gradient)" stroke-width="3"></polygon>
+
+  <!-- Middle hexagon -->
+  <polygon class="hex-mid" points="100,35 145,62.5 145,117.5 100,145 55,117.5 55,62.5" fill="none" stroke="url(#magenta-gradient)" stroke-width="2.5"></polygon>
+
+  <!-- Inner hexagon -->
+  <polygon class="hex-inner" points="100,50 130,70 130,110 100,130 70,110 70,70" fill="none" stroke="url(#cyan-gradient)" stroke-width="2"></polygon>
+
+  <!-- 3D Cube in center -->
+  <g class="cube">
+    <!-- Back face -->
+    <polygon points="100,75 115,83 115,100 100,108 85,100 85,83" fill="#0099cc" opacity="0.4"></polygon>
+
+    <!-- Top face -->
+    <polygon points="100,75 85,83 85,70 100,62 115,70 115,83" fill="url(#cyan-gradient)" opacity="0.8"></polygon>
+
+    <!-- Right face -->
+    <polygon points="100,75 115,83 115,100 100,108" fill="url(#magenta-gradient)" opacity="0.6"></polygon>
+
+    <!-- Left face -->
+    <polygon points="100,75 85,83 85,100 100,108" fill="#00d4ff" opacity="0.7"></polygon>
+
+    <!-- Front bottom face -->
+    <polygon points="100,108 85,100 85,113 100,121 115,113 115,100" fill="url(#cyan-gradient)" opacity="0.9"></polygon>
   </g>
-  <path fill="#38bdf8" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L -19.5 11.25
-      L 0 22.5
-      L 19.5 11.25
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="#bae6fd" d="
-      M 0 -22.5
-      L -19.5 -11.25
-      L 0 0
-      L 19.5 -11.25
-      z
-    "></path>
-  <path fill="none" stroke="currentColor" stroke-width="5" d="
-      M -18 -53
-      L -10 -53
-      L -10 -29.2
-      L -30.3 -17.5
-      L -30.3 17.5
-      L 0 35
-      L 30.3 17.5
-      L 30.3 -17.5
-      L 10 -29.2
-      L 10 -53
-      L 18 -53
-    "></path>
+
+  <!-- Additional glitch elements -->
+  <rect class="glitch-line" x="145" y="90" width="8" height="2" fill="url(#magenta-gradient)" style="--delay: 0.8s"></rect>
+  <rect class="glitch-line" x="47" y="90" width="8" height="2" fill="url(#cyan-gradient)" style="--delay: 1.2s"></rect>
 </svg>
 
         
@@ -514,8 +566,7 @@
     <h1 id="research">
 <i class="icon fa-solid fa-microscope"></i>Research</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<!-- This page presents our lab’s research directions, publications, and collaborations aimed at advancing knowledge in our field. -->
   </section>
 
   
@@ -534,8 +585,48 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/c7np" class="citation-image" aria-label="Open collaborative writing with Manubot">
-        <img src="https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&amp;rev=2" alt="Open collaborative writing with Manubot" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a class="citation-image" aria-label="Predicting T Cell Receptor Specificity with Graph Attention Networks">
+        <img src="" alt="Predicting T Cell Receptor Specificity with Graph Attention Networks" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      
+
+      <a class="citation-title">
+        Predicting T Cell Receptor Specificity with Graph Attention Networks
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Aiwu Xu, Dhritiben Patel, Wenjun Lin, Ping Luo
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">12th International Work-Conference on Bioinformatics and Biomedical Engineering</span>
+         · 
+        <span class="citation-date">[no date info]</span>
+         · 
+        <span class="citation-id">xu2025iwbbio-tcr</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sjk" class="citation-image" aria-label="Early Cancer Detection in Li Fraumeni Syndrome with Cell-Free DNA">
+        <img src="" alt="Early Cancer Detection in Li Fraumeni Syndrome with Cell-Free DNA" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
@@ -543,98 +634,27 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
       
       <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/c7np" class="citation-title">
-        Open collaborative writing with Manubot
+      <a href="https://doi.org/g95sjk" class="citation-title">
+        Early Cancer Detection in Li–Fraumeni Syndrome with Cell-Free DNA
       </a>
 
-      <div class="citation-authors" tabindex="0">
-        Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter
+      <div class="citation-authors" data-tooltip="Derek Wong, Ping Luo, Leslie E. Oldfield, Haifan Gong, Ledia Brunga, Ron Rabinowicz, Vallijah Subasri, Clarissa Chan, Tiana Downs, Kirsten M. Farncombe, Beatrice Luu, Maia Norman, Julia A. Sobotka, Precious Uju, Jenna Eagles, Stephanie Pedersen, Johanna Wellum, Arnavaz Danesh, Stephenie D. Prokopec, Eric Y. Stutheit-Zhao, Nadia Znassi, Lawrence E. Heisler, Richard Jovelin, Bernard Lam, Beatriz E. Lujan Toro, Kayla Marsh, Yogi Sundaravadanam, Dax Torti, Carina Man, Anna Goldenberg, Wei Xu, Patrick Veit-Haibach, Andrea S. Doria, David Malkin, Raymond H. Kim, Trevor J. Pugh" tabindex="0">
+        Derek Wong, Ping Luo, Leslie E. Oldfield, Haifan Gong, Ledia Brunga, …, Patrick Veit-Haibach, Andrea S. Doria, David Malkin, Raymond H. Kim, Trevor J. Pugh
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">PLOS Computational Biology</span>
+        <span class="citation-publisher">Cancer Discovery</span>
          · 
-        <span class="citation-date">04 Dec 2020</span>
+        <span class="citation-date">16 Oct 2023</span>
          · 
-        <span class="citation-id">doi:10.1371/journal.pcbi.1007128</span>
+        <span class="citation-id">doi:10.1158/2159-8290.CD-23-0456</span>
       </div>
 
       
         
-          <div class="citation-description">
-            Lorem ipsum <em>dolor</em> <strong>sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-          </div>
-        
 
         
-          <div class="citation-buttons">
-            
-              
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://greenelab.github.io/meta-review/" data-tooltip="Manubot" data-style="bare" aria-label="Manubot">
-      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="-450 -250 900 500">  <g transform="scale(0.9)">    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" d="        M -125 125         L -125 -125        L 0 45        L 125 -125        L 125 125      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" d="        M -200 -250        L -330 0         L -200 250      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" d="        m 200 250         L 330 0        L 200 -250      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="50" d="        M -330 0        L -370 0      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="50" d="        M 330 0        L 370 0      "></path>    <circle cx="-455" cy="0" r="30" fill="none" stroke="currentColor" stroke-width="30"></circle>    <circle cx="455" cy="0" r="30" fill="none" stroke="currentColor" stroke-width="30"></circle>  </g></svg></span>
-      
-        <span>Manubot</span>
-      
-    </a>
-  </div>
-
-
-            
-              
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/greenelab/meta-review" data-tooltip="Source code" data-style="bare" aria-label="Source code">
-      <i class="icon fa-solid fa-code"></i>
-      
-        <span>Manuscript Source</span>
-      
-    </a>
-  </div>
-
-
-            
-              
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="http://manubot.org/" data-tooltip="Website" data-style="bare" aria-label="Website">
-      <i class="icon fa-solid fa-globe"></i>
-      
-        <span>Website</span>
-      
-    </a>
-  </div>
-
-
-            
-          </div>
-        
-
-        
-          
-
-
-  <div class="tags" data-repo="greenelab/meta-review">
-    
-      <a href='/research-lab/research/?search="tag:%20open-science"' class="tag" data-tooltip='Show items with the tag "open-science"'>
-        open-science
-      </a>
-    
-      <a href='/research-lab/research/?search="tag:%20collaboration"' class="tag" data-tooltip='Show items with the tag "collaboration"'>
-        collaboration
-      </a>
-    
-  </div>
-
 
         
       
@@ -670,30 +690,152 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/g9rfr3" class="citation-image" aria-label="Scalable data harmonization for single-cell image-based profiling with CytoTable">
-        <img src="" alt="Scalable data harmonization for single-cell image-based profiling with CytoTable" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g95sqv" class="citation-image" aria-label="Cholinergic regulation of thymocyte negative selection">
+        <img src="" alt="Cholinergic regulation of thymocyte negative selection" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/g9rfr3" class="citation-title">
-        Scalable data harmonization for single-cell image-based profiling with CytoTable
+      <a href="https://doi.org/g95sqv" class="citation-title">
+        Cholinergic regulation of thymocyte negative selection
       </a>
 
-      <div class="citation-authors" tabindex="0">
-        Dave Bunten, Jenna Tomkinson, Erik Serrano, Michael J. Lippincott, Kenneth I. Brewer, Vince Rubinetti, Faisal Alquaddoomi, Gregory P. Way
+      <div class="citation-authors" data-tooltip="Shaofeng Liu, Chunxing Zheng, Robert Nechanitzky, Ping Luo, Parameswaran Ramachandran, Dat Nguyen, Andrew J. Elia, Soode Moghadas Jafari, Rhoda Law, Bryan E. Snow, Andrew C. Wakeham, Thorsten Berger, Hui Chen, Kyle T. Gill, Ryan Mcwilliam, Jerome Fortin, Nastaran Fazel Modares, Mary E. Saunders, Kiichi Murakami, Yangmin Qiu, Zhiwei You, Mahmood Mohtashami, Hai Qi, Pamela S. Ohashi, Juan Carlos Zúñiga-Pflücker, Tak W. Mak" tabindex="0">
+        Shaofeng Liu, Chunxing Zheng, Robert Nechanitzky, Ping Luo, Parameswaran Ramachandran, …, Mahmood Mohtashami, Hai Qi, Pamela S. Ohashi, Juan Carlos Zúñiga-Pflücker, Tak W. Mak
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">Cold Spring Harbor Laboratory</span>
+        <span class="citation-publisher">Nature Immunology</span>
          · 
-        <span class="citation-date">25 Jun 2025</span>
+        <span class="citation-date">21 May 2025</span>
          · 
-        <span class="citation-id">doi:10.1101/2025.06.19.660613</span>
+        <span class="citation-id">doi:10.1038/s41590-025-02152-4</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sqt" class="citation-image" aria-label="B cell-derived acetylcholine promotes liver regeneration by regulating Kupffer cell and hepatic CD8 T cell function">
+        <img src="" alt="B cell-derived acetylcholine promotes liver regeneration by regulating Kupffer cell and hepatic CD8 T cell function" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sqt" class="citation-title">
+        B cell-derived acetylcholine promotes liver regeneration by regulating Kupffer cell and hepatic CD8+ T cell function
+      </a>
+
+      <div class="citation-authors" data-tooltip="Nastaran Fazel Modares, Liam D. Hendrikse, Logan K. Smith, Michael St. Paul, Jillian Haight, Ping Luo, Shaofeng Liu, Jerome Fortin, Frances K. Tong, Andrew C. Wakeham, Soode Moghadas Jafari, Chunxing Zheng, Mackenzie Buckland, Robert Flick, Jennifer Silvester, Thorsten Berger, Troy Ketela, Simone Helke, Erica Foffi, Raheleh Niavarani, Ryan Mcwilliam, Mary E. Saunders, Isabelle Colonna, Bruna Araujo David, Tashi Rastogi, Woo-Yong Lee, Paul Kubes, Tak W. Mak" tabindex="0">
+        Nastaran Fazel Modares, Liam D. Hendrikse, Logan K. Smith, Michael St. Paul, Jillian Haight, …, Bruna Araujo David, Tashi Rastogi, Woo-Yong Lee, Paul Kubes, Tak W. Mak
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Immunity</span>
+         · 
+        <span class="citation-date">01 May 2025</span>
+         · 
+        <span class="citation-id">doi:10.1016/j.immuni.2025.04.002</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<h3 id="2024">2024</h3>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95skm" class="citation-image" aria-label="Cell-free DNA from germline TP53 mutation carriers reflect cancer-like fragmentation patterns">
+        <img src="" alt="Cell-free DNA from germline TP53 mutation carriers reflect cancer-like fragmentation patterns" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95skm" class="citation-title">
+        Cell-free DNA from germline TP53 mutation carriers reflect cancer-like fragmentation patterns
+      </a>
+
+      <div class="citation-authors" data-tooltip="Derek Wong, Maha Tageldein, Ping Luo, Erik Ensminger, Jeffrey Bruce, Leslie Oldfield, Haifan Gong, Nicholas William Fischer, Brianne Laverty, Vallijah Subasri, Scott Davidson, Reem Khan, Anita Villani, Adam Shlien, Raymond H. Kim, David Malkin, Trevor J. Pugh" tabindex="0">
+        Derek Wong, Maha Tageldein, Ping Luo, Erik Ensminger, Jeffrey Bruce, …, Anita Villani, Adam Shlien, Raymond H. Kim, David Malkin, Trevor J. Pugh
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Nature Communications</span>
+         · 
+        <span class="citation-date">27 Aug 2024</span>
+         · 
+        <span class="citation-id">doi:10.1038/s41467-024-51529-w</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g88t86" class="citation-image" aria-label="Early Changes in Tumor-Naive Cell-Free Methylomes and Fragmentomes Predict Outcomes in Pembrolizumab-Treated Solid Tumors">
+        <img src="" alt="Early Changes in Tumor-Naive Cell-Free Methylomes and Fragmentomes Predict Outcomes in Pembrolizumab-Treated Solid Tumors" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g88t86" class="citation-title">
+        Early Changes in Tumor-Naive Cell-Free Methylomes and Fragmentomes Predict Outcomes in Pembrolizumab-Treated Solid Tumors
+      </a>
+
+      <div class="citation-authors" data-tooltip="Eric Y. Stutheit-Zhao, Enrique Sanz-Garcia, Zhihui (Amy) Liu, Derek Wong, Kayla Marsh, Albiruni R. Abdul Razak, Anna Spreafico, Philippe L. Bedard, Aaron R. Hansen, Stephanie Lheureux, Dax Torti, Bernard Lam, Shih Yu Cindy Yang, Justin Burgener, Ping Luo, Yong Zeng, Nicholas Cheng, Philip Awadalla, Scott V. Bratman, Pamela S. Ohashi, Trevor J. Pugh, Lillian L. Siu" tabindex="0">
+        Eric Y. Stutheit-Zhao, Enrique Sanz-Garcia, Zhihui (Amy) Liu, Derek Wong, Kayla Marsh, …, Philip Awadalla, Scott V. Bratman, Pamela S. Ohashi, Trevor J. Pugh, Lillian L. Siu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Cancer Discovery</span>
+         · 
+        <span class="citation-date">22 Feb 2024</span>
+         · 
+        <span class="citation-id">doi:10.1158/2159-8290.CD-23-1060</span>
       </div>
 
       
@@ -712,30 +854,30 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/gs6kmr" class="citation-image" aria-label="The Monarch Initiative in 2024: an analytic platform integrating phenotypes, genes and diseases across species">
-        <img src="" alt="The Monarch Initiative in 2024: an analytic platform integrating phenotypes, genes and diseases across species" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g95sjk" class="citation-image" aria-label="Early Cancer Detection in Li Fraumeni Syndrome with Cell-Free DNA">
+        <img src="" alt="Early Cancer Detection in Li Fraumeni Syndrome with Cell-Free DNA" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/gs6kmr" class="citation-title">
-        The Monarch Initiative in 2024: an analytic platform integrating phenotypes, genes and diseases across species
+      <a href="https://doi.org/g95sjk" class="citation-title">
+        Early Cancer Detection in Li–Fraumeni Syndrome with Cell-Free DNA
       </a>
 
-      <div class="citation-authors" data-tooltip="Tim E Putman, Kevin Schaper, Nicolas Matentzoglu, Vincent P Rubinetti, Faisal S Alquaddoomi, Corey Cox, J Harry Caufield, Glass Elsarboukh, Sarah Gehrke, Harshad Hegde, Justin T Reese, Ian Braun, Richard M Bruskiewich, Luca Cappelletti, Seth Carbon, Anita R Caron, Lauren E Chan, Christopher G Chute, Katherina G Cortes, Vinícius De Souza, Tommaso Fontana, Nomi L Harris, Emily L Hartley, Eric Hurwitz, Julius O B Jacobsen, Madan Krishnamurthy, Bryan J Laraway, James A McLaughlin, Julie A McMurry, Sierra A T Moxon, Kathleen R Mullen, Shawn T O’Neil, Kent A Shefchek, Ray Stefancsik, Sabrina Toro, Nicole A Vasilevsky, Ramona L Walls, Patricia L Whetzel, David Osumi-Sutherland, Damian Smedley, Peter N Robinson, Christopher J Mungall, Melissa A Haendel, Monica C Munoz-Torres" tabindex="0">
-        Tim E Putman, Kevin Schaper, Nicolas Matentzoglu, Vincent P Rubinetti, Faisal S Alquaddoomi, …, Damian Smedley, Peter N Robinson, Christopher J Mungall, Melissa A Haendel, Monica C Munoz-Torres
+      <div class="citation-authors" data-tooltip="Derek Wong, Ping Luo, Leslie E. Oldfield, Haifan Gong, Ledia Brunga, Ron Rabinowicz, Vallijah Subasri, Clarissa Chan, Tiana Downs, Kirsten M. Farncombe, Beatrice Luu, Maia Norman, Julia A. Sobotka, Precious Uju, Jenna Eagles, Stephanie Pedersen, Johanna Wellum, Arnavaz Danesh, Stephenie D. Prokopec, Eric Y. Stutheit-Zhao, Nadia Znassi, Lawrence E. Heisler, Richard Jovelin, Bernard Lam, Beatriz E. Lujan Toro, Kayla Marsh, Yogi Sundaravadanam, Dax Torti, Carina Man, Anna Goldenberg, Wei Xu, Patrick Veit-Haibach, Andrea S. Doria, David Malkin, Raymond H. Kim, Trevor J. Pugh" tabindex="0">
+        Derek Wong, Ping Luo, Leslie E. Oldfield, Haifan Gong, Ledia Brunga, …, Patrick Veit-Haibach, Andrea S. Doria, David Malkin, Raymond H. Kim, Trevor J. Pugh
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">Nucleic Acids Research</span>
+        <span class="citation-publisher">Cancer Discovery</span>
          · 
-        <span class="citation-date">24 Nov 2023</span>
+        <span class="citation-date">16 Oct 2023</span>
          · 
-        <span class="citation-id">doi:10.1093/nar/gkad1082</span>
+        <span class="citation-id">doi:10.1158/2159-8290.CD-23-0456</span>
       </div>
 
       
@@ -752,30 +894,110 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/gsvf5z" class="citation-image" aria-label="Integration of 168,000 samples reveals global patterns of the human gut microbiome">
-        <img src="" alt="Integration of 168,000 samples reveals global patterns of the human gut microbiome" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/gspf9n" class="citation-image" aria-label="Immunophenotypic correlates of sustained MRD negativity in patients with multiple myeloma">
+        <img src="" alt="Immunophenotypic correlates of sustained MRD negativity in patients with multiple myeloma" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/gsvf5z" class="citation-title">
-        Integration of 168,000 samples reveals global patterns of the human gut microbiome
+      <a href="https://doi.org/gspf9n" class="citation-title">
+        Immunophenotypic correlates of sustained MRD negativity in patients with multiple myeloma
+      </a>
+
+      <div class="citation-authors" data-tooltip="David G. Coffey, Francesco Maura, Edgar Gonzalez-Kozlova, J. Javier Diaz-Mejia, Ping Luo, Yong Zhang, Yuexin Xu, Edus H. Warren, Travis Dawson, Brian Lee, Hui Xie, Eric Smith, Amanda Ciardiello, Hearn J. Cho, Adeeb Rahman, Seunghee Kim-Schulze, Benjamin Diamond, Alexander Lesokhin, Dickran Kazandjian, Trevor J. Pugh, Damian J. Green, Sacha Gnjatic, Ola Landgren" tabindex="0">
+        David G. Coffey, Francesco Maura, Edgar Gonzalez-Kozlova, J. Javier Diaz-Mejia, Ping Luo, …, Dickran Kazandjian, Trevor J. Pugh, Damian J. Green, Sacha Gnjatic, Ola Landgren
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Nature Communications</span>
+         · 
+        <span class="citation-date">02 Sep 2023</span>
+         · 
+        <span class="citation-id">doi:10.1038/s41467-023-40966-8</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95snt" class="citation-image" aria-label="Multiple Germline Events Contribute to Cancer Development in Patients with Li-Fraumeni Syndrome">
+        <img src="" alt="Multiple Germline Events Contribute to Cancer Development in Patients with Li-Fraumeni Syndrome" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95snt" class="citation-title">
+        Multiple Germline Events Contribute to Cancer Development in Patients with Li-Fraumeni Syndrome
+      </a>
+
+      <div class="citation-authors" data-tooltip="Vallijah Subasri, Nicholas Light, Nisha Kanwar, Jack Brzezinski, Ping Luo, Jordan R. Hansford, Elizabeth Cairney, Carol Portwine, Christine Elser, Jonathan L. Finlay, Kim E. Nichols, Noa Alon, Ledia Brunga, Jo Anson, Wendy Kohlmann, Kelvin C. de Andrade, Payal P. Khincha, Sharon A. Savage, Joshua D. Schiffman, Rosanna Weksberg, Trevor J. Pugh, Anita Villani, Adam Shlien, Anna Goldenberg, David Malkin" tabindex="0">
+        Vallijah Subasri, Nicholas Light, Nisha Kanwar, Jack Brzezinski, Ping Luo, …, Trevor J. Pugh, Anita Villani, Adam Shlien, Anna Goldenberg, David Malkin
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Cancer Research Communications</span>
+         · 
+        <span class="citation-date">01 May 2023</span>
+         · 
+        <span class="citation-id">doi:10.1158/2767-9764.CRC-22-0402</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sqw" class="citation-image" aria-label="Network Learning for Biomarker Discovery">
+        <img src="" alt="Network Learning for Biomarker Discovery" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sqw" class="citation-title">
+        Network Learning for Biomarker Discovery
       </a>
 
       <div class="citation-authors" tabindex="0">
-        Richard J. Abdill, Samantha P. Graham, Vincent Rubinetti, Frank W. Albert, Casey S. Greene, Sean Davis, Ran Blekhman
+        Yulian Ding, Minghan Fu, Ping Luo, Fang-Xiang Wu
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">Cold Spring Harbor Laboratory</span>
+        <span class="citation-publisher">International Journal of Network Dynamics and Intelligence</span>
          · 
-        <span class="citation-date">11 Oct 2023</span>
+        <span class="citation-date">27 Mar 2023</span>
          · 
-        <span class="citation-id">doi:10.1101/2023.10.11.560955</span>
+        <span class="citation-id">doi:10.53941/ijndi0201004</span>
       </div>
 
       
@@ -792,70 +1014,30 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/gr5hb5" class="citation-image" aria-label="MyGeneset.info: an interactive and programmatic platform for community-curated and user-created collections of genes">
-        <img src="" alt="MyGeneset.info: an interactive and programmatic platform for community-curated and user-created collections of genes" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g7k5qr" class="citation-image" aria-label="Integrated, Longitudinal Analysis of Cell-free DNA in Uveal Melanoma">
+        <img src="" alt="Integrated, Longitudinal Analysis of Cell-free DNA in Uveal Melanoma" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/gr5hb5" class="citation-title">
-        MyGeneset.info: an interactive and programmatic platform for community-curated and user-created collections of genes
+      <a href="https://doi.org/g7k5qr" class="citation-title">
+        Integrated, Longitudinal Analysis of Cell-free DNA in Uveal Melanoma
       </a>
 
-      <div class="citation-authors" tabindex="0">
-        Ricardo Avila, Vincent Rubinetti, Xinghua Zhou, Dongbo Hu, Zhongchao Qian, Marco Alvarado Cano, Everaldo Rodolpho, Ginger Tsueng, Casey Greene, Chunlei Wu
+      <div class="citation-authors" data-tooltip="Derek Wong, Ping Luo, Nadia Znassi, Diana P. Arteaga, Diana Gray, Arnavaz Danesh, Ming Han, Eric Y. Zhao, Stephanie Pedersen, Stephenie Prokopec, Yogi Sundaravadanam, Dax Torti, Kayla Marsh, Sareh Keshavarzi, Wei Xu, Hatem Krema, Anthony M. Joshua, Marcus O. Butler, Trevor J. Pugh" tabindex="0">
+        Derek Wong, Ping Luo, Nadia Znassi, Diana P. Arteaga, Diana Gray, …, Wei Xu, Hatem Krema, Anthony M. Joshua, Marcus O. Butler, Trevor J. Pugh
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">Nucleic Acids Research</span>
+        <span class="citation-publisher">Cancer Research Communications</span>
          · 
-        <span class="citation-date">18 Apr 2023</span>
+        <span class="citation-date">15 Feb 2023</span>
          · 
-        <span class="citation-id">doi:10.1093/nar/gkad289</span>
-      </div>
-
-      
-        
-
-        
-
-        
-      
-    </div>
-  </div>
-</div>
-
-<div class="citation-container">
-  <div class="citation">
-    
-      <a href="https://doi.org/grmcb9" class="citation-image" aria-label="Hetnet connectivity search provides rapid insights into how two biomedical entities are related">
-        <img src="" alt="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
-      </a>
-    
-
-    <div class="citation-text">
-      
-      
-
-      <a href="https://doi.org/grmcb9" class="citation-title">
-        Hetnet connectivity search provides rapid insights into how two biomedical entities are related
-      </a>
-
-      <div class="citation-authors" data-tooltip="Daniel S. Himmelstein, Michael Zietz, Vincent Rubinetti, Kyle Kloster, Benjamin J. Heil, Faisal Alquaddoomi, Dongbo Hu, David N. Nicholson, Yun Hao, Blair D. Sullivan, Michael W. Nagle, Casey S. Greene" tabindex="0">
-        Daniel S. Himmelstein, Michael Zietz, Vincent Rubinetti, Kyle Kloster, Benjamin J. Heil, …, David N. Nicholson, Yun Hao, Blair D. Sullivan, Michael W. Nagle, Casey S. Greene
-
-      </div>
-
-      <div class="citation-details">
-        <span class="citation-publisher">Cold Spring Harbor Laboratory</span>
-         · 
-        <span class="citation-date">07 Jan 2023</span>
-         · 
-        <span class="citation-id">doi:10.1101/2023.01.05.522941</span>
+        <span class="citation-id">doi:10.1158/2767-9764.CRC-22-0456</span>
       </div>
 
       
@@ -874,30 +1056,30 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/gsd85n" class="citation-image" aria-label="Hetnet connectivity search provides rapid insights into how biomedical entities are related">
-        <img src="" alt="Hetnet connectivity search provides rapid insights into how biomedical entities are related" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g95sjs" class="citation-image" aria-label="Evaluation of single-cell RNAseq labelling algorithms using cancer datasets">
+        <img src="" alt="Evaluation of single-cell RNAseq labelling algorithms using cancer datasets" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/gsd85n" class="citation-title">
-        Hetnet connectivity search provides rapid insights into how biomedical entities are related
+      <a href="https://doi.org/g95sjs" class="citation-title">
+        Evaluation of single-cell RNAseq labelling algorithms using cancer datasets
       </a>
 
-      <div class="citation-authors" data-tooltip="Daniel S Himmelstein, Michael Zietz, Vincent Rubinetti, Kyle Kloster, Benjamin J Heil, Faisal Alquaddoomi, Dongbo Hu, David N Nicholson, Yun Hao, Blair D Sullivan, Michael W Nagle, Casey S Greene" tabindex="0">
-        Daniel S Himmelstein, Michael Zietz, Vincent Rubinetti, Kyle Kloster, Benjamin J Heil, …, David N Nicholson, Yun Hao, Blair D Sullivan, Michael W Nagle, Casey S Greene
+      <div class="citation-authors" data-tooltip="Erik Christensen, Ping Luo, Andrei Turinsky, Mia Husić, Alaina Mahalanabis, Alaine Naidas, Juan Javier Diaz-Mejia, Michael Brudno, Trevor Pugh, Arun Ramani, Parisa Shooshtari" tabindex="0">
+        Erik Christensen, Ping Luo, Andrei Turinsky, Mia Husić, Alaina Mahalanabis, …, Juan Javier Diaz-Mejia, Michael Brudno, Trevor Pugh, Arun Ramani, Parisa Shooshtari
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">GigaScience</span>
+        <span class="citation-publisher">Briefings in Bioinformatics</span>
          · 
-        <span class="citation-date">28 Dec 2022</span>
+        <span class="citation-date">30 Dec 2022</span>
          · 
-        <span class="citation-id">doi:10.1093/gigascience/giad047</span>
+        <span class="citation-id">doi:10.1093/bib/bbac561</span>
       </div>
 
       
@@ -914,30 +1096,112 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/gstx7j" class="citation-image" aria-label="MolEvolvR: A web-app for characterizing proteins using molecular evolution and phylogeny">
-        <img src="" alt="MolEvolvR: A web-app for characterizing proteins using molecular evolution and phylogeny" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g95sqm" class="citation-image" aria-label="Integrated analysis of cell-free DNA for the early detection of cancer in people with Li-Fraumeni Syndrome">
+        <img src="" alt="Integrated analysis of cell-free DNA for the early detection of cancer in people with Li-Fraumeni Syndrome" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/gstx7j" class="citation-title">
-        MolEvolvR: A web-app for characterizing proteins using molecular evolution and phylogeny
+      <a href="https://doi.org/g95sqm" class="citation-title">
+        Integrated analysis of cell-free DNA for the early detection of cancer in people with Li-Fraumeni Syndrome
       </a>
 
-      <div class="citation-authors" data-tooltip="Jacob D Krol, Joseph T Burke, Samuel Z Chen, Lo M Sosinski, Faisal S Alquaddoomi, Evan P Brenner, Ethan P Wolfe, Vincent P Rubinetti, Shaddai Amolitos, Kellen M Reason, John B Johnston, Janani Ravi" tabindex="0">
-        Jacob D Krol, Joseph T Burke, Samuel Z Chen, Lo M Sosinski, Faisal S Alquaddoomi, …, Vincent P Rubinetti, Shaddai Amolitos, Kellen M Reason, John B Johnston, Janani Ravi
+      <div class="citation-authors" data-tooltip="Derek Wong, Ping Luo, Leslie Oldfield, Haifan Gong, Ledia Brunga, Ron Rabinowicz, Vallijah Subasri, Clarissa Chan, Tiana Downs, Kirsten M Farncombe, Beatrice Luu, Maia Norman, Jenna Eagles, Stephenie Pederson, Johanna Wellum, Arnavaz Danesh, Stephenie Prokopec, Eric Zhao, Nadia Znassi, Bernard Lam, Kayla Marsh, Yogi Sundaravadanam, Dax Torti, David Malkin, Raymond H Kim, Trevor J Pugh" tabindex="0">
+        Derek Wong, Ping Luo, Leslie Oldfield, Haifan Gong, Ledia Brunga, …, Yogi Sundaravadanam, Dax Torti, David Malkin, Raymond H Kim, Trevor J Pugh
 
       </div>
 
       <div class="citation-details">
         <span class="citation-publisher">Cold Spring Harbor Laboratory</span>
          · 
-        <span class="citation-date">22 Feb 2022</span>
+        <span class="citation-date">11 Oct 2022</span>
          · 
-        <span class="citation-id">doi:10.1101/2022.02.18.461833</span>
+        <span class="citation-id">doi:10.1101/2022.10.07.22280848</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sjr" class="citation-image" aria-label="Evaluation of single-cell RNA-seq clustering algorithms on cancer tumor datasets">
+        <img src="" alt="Evaluation of single-cell RNA-seq clustering algorithms on cancer tumor datasets" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sjr" class="citation-title">
+        Evaluation of single-cell RNA-seq clustering algorithms on cancer tumor datasets
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Alaina Mahalanabis, Andrei L. Turinsky, Mia Husić, Erik Christensen, Ping Luo, Alaine Naidas, Michael Brudno, Trevor Pugh, Arun K. Ramani, Parisa Shooshtari
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Computational and Structural Biotechnology Journal</span>
+         · 
+        <span class="citation-date">01 Jan 2022</span>
+         · 
+        <span class="citation-id">doi:10.1016/j.csbj.2022.10.029</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<h3 id="2021">2021</h3>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/gm2h88" class="citation-image" aria-label="Identifying cell types from single-cell data based on similarities and dissimilarities between cells">
+        <img src="" alt="Identifying cell types from single-cell data based on similarities and dissimilarities between cells" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/gm2h88" class="citation-title">
+        Identifying cell types from single-cell data based on similarities and dissimilarities between cells
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Yuanyuan Li, Ping Luo, Yi Lu, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">BMC Bioinformatics</span>
+         · 
+        <span class="citation-date">01 May 2021</span>
+         · 
+        <span class="citation-id">doi:10.1186/s12859-020-03873-z</span>
       </div>
 
       
@@ -956,8 +1220,8 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/c7np" class="citation-image" aria-label="Open collaborative writing with Manubot">
-        <img src="https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&amp;rev=2" alt="Open collaborative writing with Manubot" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g95sqx" class="citation-image" aria-label="Predicting disease associated genes: Computational methods, databases, and evaluations">
+        <img src="" alt="Predicting disease associated genes: Computational methods, databases, and evaluations" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
@@ -965,132 +1229,21 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
       
       <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/c7np" class="citation-title">
-        Open collaborative writing with Manubot
+      <a href="https://doi.org/g95sqx" class="citation-title">
+        Predicting disease‐associated genes: Computational methods, databases, and evaluations
       </a>
 
       <div class="citation-authors" tabindex="0">
-        Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter
+        Ping Luo, Bolin Chen, Bo Liao, Fang‐Xiang Wu
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">PLOS Computational Biology</span>
+        <span class="citation-publisher">WIREs Data Mining and Knowledge Discovery</span>
          · 
-        <span class="citation-date">04 Dec 2020</span>
+        <span class="citation-date">28 Jul 2020</span>
          · 
-        <span class="citation-id">doi:10.1371/journal.pcbi.1007128</span>
-      </div>
-
-      
-        
-          <div class="citation-description">
-            Lorem ipsum <em>dolor</em> <strong>sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-          </div>
-        
-
-        
-          <div class="citation-buttons">
-            
-              
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://greenelab.github.io/meta-review/" data-tooltip="Manubot" data-style="bare" aria-label="Manubot">
-      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="-450 -250 900 500">  <g transform="scale(0.9)">    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" d="        M -125 125         L -125 -125        L 0 45        L 125 -125        L 125 125      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" d="        M -200 -250        L -330 0         L -200 250      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" d="        m 200 250         L 330 0        L 200 -250      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="50" d="        M -330 0        L -370 0      "></path>    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="50" d="        M 330 0        L 370 0      "></path>    <circle cx="-455" cy="0" r="30" fill="none" stroke="currentColor" stroke-width="30"></circle>    <circle cx="455" cy="0" r="30" fill="none" stroke="currentColor" stroke-width="30"></circle>  </g></svg></span>
-      
-        <span>Manubot</span>
-      
-    </a>
-  </div>
-
-
-            
-              
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/greenelab/meta-review" data-tooltip="Source code" data-style="bare" aria-label="Source code">
-      <i class="icon fa-solid fa-code"></i>
-      
-        <span>Manuscript Source</span>
-      
-    </a>
-  </div>
-
-
-            
-              
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="http://manubot.org/" data-tooltip="Website" data-style="bare" aria-label="Website">
-      <i class="icon fa-solid fa-globe"></i>
-      
-        <span>Website</span>
-      
-    </a>
-  </div>
-
-
-            
-          </div>
-        
-
-        
-          
-
-
-  <div class="tags" data-repo="greenelab/meta-review">
-    
-      <a href='/research-lab/research/?search="tag:%20open-science"' class="tag" data-tooltip='Show items with the tag "open-science"'>
-        open-science
-      </a>
-    
-      <a href='/research-lab/research/?search="tag:%20collaboration"' class="tag" data-tooltip='Show items with the tag "collaboration"'>
-        collaboration
-      </a>
-    
-  </div>
-
-
-        
-      
-    </div>
-  </div>
-</div>
-
-<div class="citation-container">
-  <div class="citation">
-    
-      <a href="https://doi.org/gg2mjh" class="citation-image" aria-label="Compressing gene expression data using multiple latent space dimensionalities learns complementary biological representations">
-        <img src="" alt="Compressing gene expression data using multiple latent space dimensionalities learns complementary biological representations" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
-      </a>
-    
-
-    <div class="citation-text">
-      
-      
-
-      <a href="https://doi.org/gg2mjh" class="citation-title">
-        Compressing gene expression data using multiple latent space dimensionalities learns complementary biological representations
-      </a>
-
-      <div class="citation-authors" tabindex="0">
-        Gregory P. Way, Michael Zietz, Vincent Rubinetti, Daniel S. Himmelstein, Casey S. Greene
-
-      </div>
-
-      <div class="citation-details">
-        <span class="citation-publisher">Genome Biology</span>
-         · 
-        <span class="citation-date">11 May 2020</span>
-         · 
-        <span class="citation-id">doi:10.1186/s13059-020-02021-3</span>
+        <span class="citation-id">doi:10.1002/widm.1383</span>
       </div>
 
       
@@ -1107,30 +1260,70 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/gg7m48" class="citation-image" aria-label="Constructing knowledge graphs and their biomedical applications">
-        <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg" alt="Constructing knowledge graphs and their biomedical applications" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/ggx5jm" class="citation-image" aria-label="CReSCENT: CanceR Single Cell ExpressioN Toolkit">
+        <img src="" alt="CReSCENT: CanceR Single Cell ExpressioN Toolkit" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/gg7m48" class="citation-title">
-        Constructing knowledge graphs and their biomedical applications
+      <a href="https://doi.org/ggx5jm" class="citation-title">
+        CReSCENT: CanceR Single Cell ExpressioN Toolkit
       </a>
 
-      <div class="citation-authors" tabindex="0">
-        David N. Nicholson, Casey S. Greene
+      <div class="citation-authors" data-tooltip="Suluxan Mohanraj, J Javier Díaz-Mejía, Martin D Pham, Hillary Elrick, Mia Husić, Shaikh Rashid, Ping Luo, Prabnur Bal, Kevin Lu, Samarth Patel, Alaina Mahalanabis, Alaine Naidas, Erik Christensen, Danielle Croucher, Laura M Richards, Parisa Shooshtari, Michael Brudno, Arun K Ramani, Trevor J Pugh" tabindex="0">
+        Suluxan Mohanraj, J Javier Díaz-Mejía, Martin D Pham, Hillary Elrick, Mia Husić, …, Laura M Richards, Parisa Shooshtari, Michael Brudno, Arun K Ramani, Trevor J Pugh
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">Computational and Structural Biotechnology Journal</span>
+        <span class="citation-publisher">Nucleic Acids Research</span>
          · 
-        <span class="citation-date">01 Jan 2020</span>
+        <span class="citation-date">01 Jun 2020</span>
          · 
-        <span class="citation-id">doi:10.1016/j.csbj.2020.05.017</span>
+        <span class="citation-id">doi:10.1093/nar/gkaa437</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sjq" class="citation-image" aria-label="Ensemble disease gene prediction by clinical sample-based networks">
+        <img src="" alt="Ensemble disease gene prediction by clinical sample-based networks" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sjq" class="citation-title">
+        Ensemble disease gene prediction by clinical sample-based networks
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Ping Luo, Li-Ping Tian, Bolin Chen, Qianghua Xiao, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">BMC Bioinformatics</span>
+         · 
+        <span class="citation-date">01 Mar 2020</span>
+         · 
+        <span class="citation-id">doi:10.1186/s12859-020-3346-8</span>
       </div>
 
       
@@ -1149,30 +1342,230 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/gfxjxf" class="citation-image" aria-label="Sequential compression of gene expression across dimensionalities and methods reveals no single best method or dimensionality">
-        <img src="" alt="Sequential compression of gene expression across dimensionalities and methods reveals no single best method or dimensionality" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g95sjp" class="citation-image" aria-label="Identifying Disease-Gene Associations With Graph-Regularized Manifold Learning">
+        <img src="" alt="Identifying Disease-Gene Associations With Graph-Regularized Manifold Learning" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
     <div class="citation-text">
       
-      
+      <i class="icon fa-solid fa-scroll"></i>
 
-      <a href="https://doi.org/gfxjxf" class="citation-title">
-        Sequential compression of gene expression across dimensionalities and methods reveals no single best method or dimensionality
+      <a href="https://doi.org/g95sjp" class="citation-title">
+        Identifying Disease-Gene Associations With Graph-Regularized Manifold Learning
       </a>
 
       <div class="citation-authors" tabindex="0">
-        Gregory P. Way, Michael Zietz, Vincent Rubinetti, Daniel S. Himmelstein, Casey S. Greene
+        Ping Luo, Qianghua Xiao, Pi-Jing Wei, Bo Liao, Fang-Xiang Wu
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">Cold Spring Harbor Laboratory</span>
+        <span class="citation-publisher">Frontiers in Genetics</span>
          · 
-        <span class="citation-date">11 Mar 2019</span>
+        <span class="citation-date">02 Apr 2019</span>
          · 
-        <span class="citation-id">doi:10.1101/573782</span>
+        <span class="citation-id">doi:10.3389/fgene.2019.00270</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sjn" class="citation-image" aria-label="Enhancing the prediction of disease gene associations with multimodal deep learning">
+        <img src="" alt="Enhancing the prediction of disease gene associations with multimodal deep learning" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sjn" class="citation-title">
+        Enhancing the prediction of disease–gene associations with multimodal deep learning
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Ping Luo, Yuanyuan Li, Li-Ping Tian, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Bioinformatics</span>
+         · 
+        <span class="citation-date">02 Mar 2019</span>
+         · 
+        <span class="citation-id">doi:10.1093/bioinformatics/btz155</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sqk" class="citation-image" aria-label="A Novel Core Attachment Based Method to Identify Dynamic Protein Complexes Based on Gene Expression Profiles and PPI Networks">
+        <img src="" alt="A Novel Core Attachment Based Method to Identify Dynamic Protein Complexes Based on Gene Expression Profiles and PPI Networks" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sqk" class="citation-title">
+        A Novel Core‐Attachment–Based Method to Identify Dynamic Protein Complexes Based on Gene Expression Profiles and PPI Networks
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Qianghua Xiao, Ping Luo, Min Li, Jianxin Wang, Fang‐Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">PROTEOMICS</span>
+         · 
+        <span class="citation-date">20 Feb 2019</span>
+         · 
+        <span class="citation-id">doi:10.1002/pmic.201800129</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/gm4zsf" class="citation-image" aria-label="deepDriver: Predicting Cancer Driver Genes Based on Somatic Mutations Using Deep Convolutional Neural Networks">
+        <img src="" alt="deepDriver: Predicting Cancer Driver Genes Based on Somatic Mutations Using Deep Convolutional Neural Networks" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/gm4zsf" class="citation-title">
+        deepDriver: Predicting Cancer Driver Genes Based on Somatic Mutations Using Deep Convolutional Neural Networks
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Ping Luo, Yulian Ding, Xiujuan Lei, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Frontiers in Genetics</span>
+         · 
+        <span class="citation-date">29 Jan 2019</span>
+         · 
+        <span class="citation-id">doi:10.3389/fgene.2019.00013</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sqr" class="citation-image" aria-label="Improved Spectral Clustering Method for Identifying Cell Types from Single-Cell Data">
+        <img src="" alt="Improved Spectral Clustering Method for Identifying Cell Types from Single-Cell Data" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sqr" class="citation-title">
+        Improved Spectral Clustering Method for Identifying Cell Types from Single-Cell Data
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Yuanyuan Li, Ping Luo, Yi Lu, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Lecture Notes in Computer Science</span>
+         · 
+        <span class="citation-date">01 Jan 2019</span>
+         · 
+        <span class="citation-id">doi:10.1007/978-3-030-26969-2_17</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sjm" class="citation-image" aria-label="Disease Gene Prediction by Integrating PPI Networks, Clinical RNA-Seq Data and OMIM Data">
+        <img src="" alt="Disease Gene Prediction by Integrating PPI Networks, Clinical RNA-Seq Data and OMIM Data" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sjm" class="citation-title">
+        Disease Gene Prediction by Integrating PPI Networks, Clinical RNA-Seq Data and OMIM Data
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Ping Luo, Li-Ping Tian, Jishou Ruan, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">IEEE/ACM Transactions on Computational Biology and Bioinformatics</span>
+         · 
+        <span class="citation-date">01 Jan 2019</span>
+         · 
+        <span class="citation-id">doi:10.1109/TCBB.2017.2770120</span>
       </div>
 
       
@@ -1191,8 +1584,172 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <div class="citation-container">
   <div class="citation">
     
-      <a href="https://doi.org/ckcj" class="citation-image" aria-label="Sci-Hub provides access to nearly all scholarly literature">
-        <img src="https://iiif.elifesciences.org/lax:32822/elife-32822-fig8-v3.tif/full/863,/0/default.webp" alt="Sci-Hub provides access to nearly all scholarly literature" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      <a href="https://doi.org/g95sqq" class="citation-image" aria-label="Predicting Disease Genes from Clinical Single Sample-Based PPI Networks">
+        <img src="" alt="Predicting Disease Genes from Clinical Single Sample-Based PPI Networks" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sqq" class="citation-title">
+        Predicting Disease Genes from Clinical Single Sample-Based PPI Networks
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Ping Luo, Li-Ping Tian, Bolin Chen, Qianghua Xiao, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Lecture Notes in Computer Science</span>
+         · 
+        <span class="citation-date">01 Jan 2018</span>
+         · 
+        <span class="citation-id">doi:10.1007/978-3-319-78723-7_21</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sqp" class="citation-image" aria-label="Predicting Gene-Disease Associations with Manifold Learning">
+        <img src="" alt="Predicting Gene-Disease Associations with Manifold Learning" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sqp" class="citation-title">
+        Predicting Gene-Disease Associations with Manifold Learning
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Ping Luo, Li-Ping Tian, Bolin Chen, Qianghua Xiao, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Lecture Notes in Computer Science</span>
+         · 
+        <span class="citation-date">01 Jan 2018</span>
+         · 
+        <span class="citation-id">doi:10.1007/978-3-319-94968-0_26</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/gcs5gm" class="citation-image" aria-label="CASNMF: A Converged Algorithm for symmetrical nonnegative matrix factorization">
+        <img src="" alt="CASNMF: A Converged Algorithm for symmetrical nonnegative matrix factorization" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/gcs5gm" class="citation-title">
+        CASNMF: A Converged Algorithm for symmetrical nonnegative matrix factorization
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Li-Ping Tian, Ping Luo, Haiying Wang, Huiru Zheng, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">Neurocomputing</span>
+         · 
+        <span class="citation-date">01 Jan 2018</span>
+         · 
+        <span class="citation-id">doi:10.1016/j.neucom.2017.10.039</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<h3 id="2016">2016</h3>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a href="https://doi.org/g95sqn" class="citation-image" aria-label="Identifying disease genes from PPI networks weighted by gene expression under different conditions">
+        <img src="" alt="Identifying disease genes from PPI networks weighted by gene expression under different conditions" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      <i class="icon fa-solid fa-scroll"></i>
+
+      <a href="https://doi.org/g95sqn" class="citation-title">
+        Identifying disease genes from PPI networks weighted by gene expression under different conditions
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Ping Luo,  Li-Ping Tian,  Jishou Ruan, Fang-Xiang Wu
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">2016 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</span>
+         · 
+        <span class="citation-date">01 Dec 2016</span>
+         · 
+        <span class="citation-id">doi:10.1109/BIBM.2016.7822699</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<h3></h3>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a class="citation-image" aria-label="Creation of Visualizations with a Multi-Agent LLM Approach">
+        <img src="" alt="Creation of Visualizations with a Multi-Agent LLM Approach" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
       </a>
     
 
@@ -1200,21 +1757,61 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
       
       
 
-      <a href="https://doi.org/ckcj" class="citation-title">
-        Sci-Hub provides access to nearly all scholarly literature
+      <a class="citation-title">
+        Creation of Visualizations with a Multi-Agent LLM Approach
       </a>
 
       <div class="citation-authors" tabindex="0">
-        Daniel S Himmelstein, Ariel Rodriguez Romero, Jacob G Levernier, Thomas Anthony Munro, Stephen Reid McLaughlin, Bastian Greshake Tzovaras, Casey S Greene
+        Ping Luo, Kyle Gauthier, Bo Huang, Wenjun Lin
 
       </div>
 
       <div class="citation-details">
-        <span class="citation-publisher">eLife</span>
+        <span class="citation-publisher">10th International Congress on Information and Communication Technology</span>
          · 
-        <span class="citation-date">01 Mar 2018</span>
+        <span class="citation-date">[no date info]</span>
          · 
-        <span class="citation-id">doi:10.7554/eLife.32822</span>
+        <span class="citation-id">luo2025icict-viz</span>
+      </div>
+
+      
+        
+
+        
+
+        
+      
+    </div>
+  </div>
+</div>
+
+<div class="citation-container">
+  <div class="citation">
+    
+      <a class="citation-image" aria-label="Predicting T Cell Receptor Specificity with Graph Attention Networks">
+        <img src="" alt="Predicting T Cell Receptor Specificity with Graph Attention Networks" loading="lazy" onerror="this.src = '/research-lab/images/fallback.svg'; this.onerror = null;">
+      </a>
+    
+
+    <div class="citation-text">
+      
+      
+
+      <a class="citation-title">
+        Predicting T Cell Receptor Specificity with Graph Attention Networks
+      </a>
+
+      <div class="citation-authors" tabindex="0">
+        Aiwu Xu, Dhritiben Patel, Wenjun Lin, Ping Luo
+
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">12th International Work-Conference on Bioinformatics and Biomedical Engineering</span>
+         · 
+        <span class="citation-date">[no date info]</span>
+         · 
+        <span class="citation-id">xu2025iwbbio-tcr</span>
       </div>
 
       
@@ -1312,21 +1909,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   <div class="button-wrapper">
     <a class="button" href="/research-lab" data-tooltip="Twitter" data-style="bare" aria-label="Twitter">
       <i class="icon fa-brands fa-twitter"></i>
-      
-    </a>
-  </div>
-
-
-    
-      
-      
-      
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="https://youtube.com/@ping-algoma" data-tooltip="YouTube" data-style="bare" aria-label="YouTube">
-      <i class="icon fa-brands fa-youtube"></i>
       
     </a>
   </div>
