@@ -1,7 +1,7 @@
 - title: PANcancer GNN-based Early cancer detection using cell-free Methylome
   subtitle: PANGEM
   group: featured
-  image: images/pangem.png
+  image: images/PANGEM.png
   link: https://github.com/GenTensor/PANGEM
   description: 
   repo: GenTensor/PANGEM
