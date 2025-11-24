@@ -13,7 +13,7 @@ nav:
 
 ## Highlighted
 
-{% include citation.html lookup="Predicting T Cell Receptor Specificity with Graph Attention Networks" style="rich" %}
+{% include citation.html lookup="doi:10.1007/978-3-032-08452-1_17" style="rich" %}
 
 {% include citation.html lookup="Early Cancer Detection in Li–Fraumeni Syndrome with Cell-Free DNA" style="rich" %}
 

@@ -379,29 +379,29 @@
   type: paper
   plugin: sources.py
   file: sources.yaml
-- id: xu2025iwbbio-tcr
-  title: Predicting T Cell Receptor Specificity with Graph Attention Networks
+- id: doi:10.1007/978-3-032-08452-1_17
+  title: "Predicting T Cell Receptor Specificity with\_Graph Attention Networks"
   authors:
   - Aiwu Xu
   - Dhritiben Patel
   - Wenjun Lin
   - Ping Luo
-  publisher: 12th International Work-Conference on Bioinformatics and Biomedical Engineering
-  date: ''
-  location: Gran Canaria, Spain
+  publisher: Lecture Notes in Computer Science
+  date: '2025-11-16'
+  link: https://doi.org/hbcdp3
   type: paper-conference
   plugin: sources.py
   file: sources.yaml
-- id: luo2025icict-viz
-  title: Creation of Visualizations with a Multi-Agent LLM Approach
+- id: doi:10.1007/978-981-96-6429-0_16
+  title: Automatic Creation of Visualizations with a Multi-Agent LLM Approach
   authors:
   - Ping Luo
   - Kyle Gauthier
   - Bo Huang
   - Wenjun Lin
-  publisher: 10th International Congress on Information and Communication Technology
-  date: ''
-  location: London, UK
+  publisher: Lecture Notes in Networks and Systems
+  date: '2025-01-01'
+  link: https://doi.org/hbcdp4
   type: paper-conference
   plugin: sources.py
   file: sources.yaml

@@ -55,28 +55,10 @@
 - id: doi:10.1007/978-3-030-26969-2_17
   type: paper
 
-- id: xu2025iwbbio-tcr
-  title: "Predicting T Cell Receptor Specificity with Graph Attention Networks"
-  authors:
-    - Aiwu Xu
-    - Dhritiben Patel
-    - Wenjun Lin
-    - Ping Luo
-  publisher: 12th International Work-Conference on Bioinformatics and Biomedical Engineering
-  date: 2025-07
-  location: Gran Canaria, Spain
+- id: doi:10.1007/978-3-032-08452-1_17
   type: paper-conference
 
-- id: luo2025icict-viz
-  title: "Creation of Visualizations with a Multi-Agent LLM Approach"
-  authors:
-    - Ping Luo
-    - Kyle Gauthier
-    - Bo Huang
-    - Wenjun Lin
-  publisher: 10th International Congress on Information and Communication Technology
-  date: 2025-02
-  location: London, UK
+- id: doi:10.1007/978-981-96-6429-0_16
   type: paper-conference
 
 - id: doi:10.1016/j.immuni.2025.04.002
