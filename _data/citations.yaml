@@ -599,3 +599,39 @@
   type: paper
   plugin: sources.py
   file: sources.yaml
+- id: doi:10.1097/SLA.0000000000007003
+  title: Plasma Cell-free DNA Methylomes for Hepatocellular Carcinoma Detection and
+    Monitoring After Liver Resection or Transplantation
+  authors:
+  - Kui Chen
+  - Zhihao Li
+  - Bianca O. Kirsh
+  - Ping Luo
+  - Stephanie Pedersen
+  - Roxana C. Bucur
+  - Nadia A. Rukavina
+  - Jeffrey P. Bruce
+  - Arnavaz Danesh
+  - Mazdak Riverin
+  - Sandra E. Fischer
+  - Mamatha Bhat
+  - Nazia Selzner
+  - Sonya A. MacParland
+  - Carol-Anne Moulton
+  - Steven Gallinger
+  - Ian D. McGilvray
+  - Mark S. Cattral
+  - Markus Selzner
+  - Trevor W. Reichman
+  - Chaya Shwaartz
+  - Blayne A. Sayed
+  - Sean P. Cleary
+  - Gonzalo Sapisochin
+  - Anand Ghanekar
+  - Trevor J. Pugh
+  publisher: Annals of Surgery
+  date: '2025-12-31'
+  link: https://doi.org/hbh3nv
+  type: paper
+  plugin: sources.py
+  file: sources.yaml

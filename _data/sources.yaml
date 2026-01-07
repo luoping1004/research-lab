@@ -81,3 +81,6 @@
 
 - id: doi:10.1002/widm.1383
   type: paper
+
+- id: doi:10.1097/SLA.0000000000007003
+  type: paper
