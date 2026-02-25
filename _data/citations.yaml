@@ -635,3 +635,41 @@
   type: paper
   plugin: sources.py
   file: sources.yaml
+- id: doi:10.1038/s43018-026-01116-3
+  title: A pan-cancer compendium of 1,294 plasma cell-free DNA methylomes and fragmentomes
+    enabling multicancer detection
+  authors:
+  - Yong Zeng
+  - Dor D. Abelman
+  - Althaf Singhawansa
+  - Nicholas Cheng
+  - Yuanchang Fang
+  - Sasha C. Main
+  - Emma Bell
+  - Wenbin Ye
+  - Ping Luo
+  - Samantha L. Wilson
+  - Eric Y. Stutheit-Zhao
+  - Derek Wong
+  - Nadia Znassi
+  - Kui Chen
+  - Suluxan Mohanraj
+  - Enrique Sanz-Garcia
+  - Faiyaz Notta
+  - Anand Ghanekar
+  - Philip Awadalla
+  - Benjamin H. Lok
+  - Michael M. Hoffman
+  - Raymond H. Kim
+  - Gelareh Zadeh
+  - Daniel D. De Carvalho
+  - Scott V. Bratman
+  - Mathieu Lupien
+  - Trevor J. Pugh
+  - Housheng Hansen He
+  publisher: Nature Cancer
+  date: '2026-02-19'
+  link: https://doi.org/hbqmhr
+  type: paper
+  plugin: sources.py
+  file: sources.yaml
