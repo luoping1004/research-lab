@@ -7,6 +7,33 @@ Our lab develops innovative computational approaches to understand complex biolo
 
 {% include section.html %}
 
+## Latest News
+
+{% assign news = site.posts | where_exp: "post", "post.tags contains 'news'" | sort: "date" | reverse %}
+
+<ul class="news-list">
+  {% for post in news limit: 3 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%B %-d, %Y" }}
+      </time>
+      <span class="news-title">{{ post.title }}</span>
+      <a class="news-link" href="{{ post.url | relative_url | uri_escape }}">View post</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{%
+  include button.html
+  link="blog"
+  text="View all news"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% include section.html %}
+
 ## Highlights
 
 {% capture text %}

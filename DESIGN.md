@@ -29,7 +29,7 @@
 
 - Primary navigation: Team, Projects, Research, Teaching, Blog, Contact.
 - Core routes/screens: `/`, `/team/`, `/projects/`, `/research/`, `/teaching/`, `/blog/`, `/contact/`.
-- Content hierarchy: Page title first, followed by a brief contextual label or introduction, then scannable content.
+- Content hierarchy: Page title first, followed by a brief contextual label or introduction, then scannable content. The homepage places Latest News before Highlights so timely updates are visible without changing the primary navigation.
 
 ## Design principles
 
@@ -48,7 +48,7 @@
 
 ## Components
 
-- Existing components to reuse: Default layout, header navigation, page headings, icons, sections, lists, buttons, cards, and figures.
+- Existing components to reuse: Default layout, header navigation, page headings, icons, sections, lists, buttons, cards, figures, post excerpts, and the compact homepage news list.
 - New/changed components: None; Teaching reuses the existing alternating feature component for course image, title, and introduction blocks.
 - Variants and states: Follow the site's existing light, dark, desktop, and mobile states.
 - Token/component ownership: `_styles/`, `_includes/`, and `_layouts/` remain authoritative.
